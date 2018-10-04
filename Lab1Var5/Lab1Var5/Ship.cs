@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace Lab1Var5
 {
     public enum Direction
-        
+        //Hi
     {
         Up,
         Down,
