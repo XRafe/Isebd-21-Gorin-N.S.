@@ -9,6 +9,7 @@ namespace Lab1Var5
 {
     public enum Direction
         //Hi
+        //Hi
     {
         Up,
         Down,
