@@ -38,8 +38,7 @@ namespace Lab1Var5
         private void buttonCreate_Click(object sender, EventArgs e)
         {
             Random rnd = new Random();
-            car = new Ship(rnd.Next(100, 300), rnd.Next(1000, 2000), Color.Blue,
-           Color.Yellow, true, true, true);
+            car = new Ship(rnd.Next(100, 300), rnd.Next(1000, 2000), Color.Blue);
             car.SetPosition(rnd.Next(10, 100), rnd.Next(10, 100), pictureBoxCars.Width,
            pictureBoxCars.Height);
             Draw();
@@ -74,6 +73,16 @@ namespace Lab1Var5
         private void Button_Down_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Random rnd = new Random();
+            car = new WaterCar(rnd.Next(100, 300), rnd.Next(1000, 2000), Color.Blue,
+           Color.Yellow, true, true, true);
+            car.SetPosition(rnd.Next(10, 100), rnd.Next(10, 100), pictureBoxCars.Width,
+           pictureBoxCars.Height);
+            Draw();
         }
     }
 }

@@ -28,24 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.buttonCreate = new System.Windows.Forms.Button();
+            this.CrSt = new System.Windows.Forms.Button();
             this.buttonLeft = new System.Windows.Forms.Button();
             this.buttonDown = new System.Windows.Forms.Button();
             this.buttonRight = new System.Windows.Forms.Button();
             this.buttonUp = new System.Windows.Forms.Button();
             this.pictureBoxCars = new System.Windows.Forms.PictureBox();
+            this.CrTun = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCars)).BeginInit();
             this.SuspendLayout();
             // 
-            // buttonCreate
+            // CrSt
             // 
-            this.buttonCreate.Location = new System.Drawing.Point(8, 8);
-            this.buttonCreate.Name = "buttonCreate";
-            this.buttonCreate.Size = new System.Drawing.Size(81, 23);
-            this.buttonCreate.TabIndex = 1;
-            this.buttonCreate.Text = "Создать";
-            this.buttonCreate.UseVisualStyleBackColor = true;
-            this.buttonCreate.Click += new System.EventHandler(this.buttonCreate_Click);
+            this.CrSt.Location = new System.Drawing.Point(8, 8);
+            this.CrSt.Name = "CrSt";
+            this.CrSt.Size = new System.Drawing.Size(91, 23);
+            this.CrSt.TabIndex = 1;
+            this.CrSt.Text = "Create Standart";
+            this.CrSt.UseVisualStyleBackColor = true;
+            this.CrSt.Click += new System.EventHandler(this.buttonCreate_Click);
             // 
             // buttonLeft
             // 
@@ -104,18 +105,29 @@
             this.pictureBoxCars.TabIndex = 0;
             this.pictureBoxCars.TabStop = false;
             // 
-            // FormCar
+            // CrTun
+            // 
+            this.CrTun.Location = new System.Drawing.Point(511, 8);
+            this.CrTun.Name = "CrTun";
+            this.CrTun.Size = new System.Drawing.Size(97, 23);
+            this.CrTun.TabIndex = 6;
+            this.CrTun.Text = "Create Tuning";
+            this.CrTun.UseVisualStyleBackColor = true;
+            this.CrTun.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // FormShip
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(620, 333);
+            this.Controls.Add(this.CrTun);
             this.Controls.Add(this.buttonRight);
             this.Controls.Add(this.buttonDown);
             this.Controls.Add(this.buttonLeft);
             this.Controls.Add(this.buttonUp);
-            this.Controls.Add(this.buttonCreate);
+            this.Controls.Add(this.CrSt);
             this.Controls.Add(this.pictureBoxCars);
-            this.Name = "FormCar";
+            this.Name = "FormShip";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCars)).EndInit();
             this.ResumeLayout(false);
@@ -125,11 +137,12 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBoxCars;
-        private System.Windows.Forms.Button buttonCreate;
+        private System.Windows.Forms.Button CrSt;
         private System.Windows.Forms.Button buttonUp;
         private System.Windows.Forms.Button buttonLeft;
         private System.Windows.Forms.Button buttonDown;
         private System.Windows.Forms.Button buttonRight;
+        private System.Windows.Forms.Button CrTun;
     }
 }
 
