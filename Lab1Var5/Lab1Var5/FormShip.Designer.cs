@@ -101,7 +101,7 @@
             this.pictureBoxCars.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBoxCars.Location = new System.Drawing.Point(0, 0);
             this.pictureBoxCars.Name = "pictureBoxCars";
-            this.pictureBoxCars.Size = new System.Drawing.Size(620, 333);
+            this.pictureBoxCars.Size = new System.Drawing.Size(736, 333);
             this.pictureBoxCars.TabIndex = 0;
             this.pictureBoxCars.TabStop = false;
             // 

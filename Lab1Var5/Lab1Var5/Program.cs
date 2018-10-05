@@ -16,7 +16,7 @@ namespace Lab1Var5
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormShip());
+            Application.Run(new FormParking());
         }
     }
 }
