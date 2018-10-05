@@ -24,11 +24,11 @@ namespace Lab1Var5
         /// <summary>
         /// Размер парковочного места (ширина)
         /// </summary>
-        private int _placeSizeWidth = 300;
+        private int _placeSizeWidth = 200;
         /// <summary>
         /// Размер парковочного места (высота)
         /// </summary>
-        private int _placeSizeHeight = 150;
+        private int _placeSizeHeight = 100;
         /// <summary>
         /// Конструктор
         /// </summary>
@@ -130,6 +130,7 @@ namespace Lab1Var5
                 }
                 g.DrawLine(pen, i * _placeSizeWidth, 0, i * _placeSizeWidth, 400);
             }
-        }
+        }
+
     }
 }
