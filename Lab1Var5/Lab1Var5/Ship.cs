@@ -93,23 +93,20 @@ namespace Lab1Var5
             Pen pen = new Pen(Color.Green);
 
 
-                g.FillRectangle(body, _startPosX + 80, _startPosY - 6, 120, 40);
-                g.FillRectangle(general, _startPosX + 90, _startPosY - 26, 90, 20);
-                g.FillRectangle(tube, _startPosX + 110, _startPosY - 56, 30, 30);
-                g.DrawLine(pen, _startPosX + 80, _startPosY + 30, _startPosX + 30, _startPosY - 30);
-                while (yline < 35)
-                {
-                    g.DrawLine(pen, _startPosX + 80, _startPosY + yline, _startPosX + 30, _startPosY - 30);
 
-                    g.DrawLine(pen, _startPosX + 200, _startPosY + yline, _startPosX + 250, _startPosY - 30);
-                    yline++;
-                }
+            g.FillRectangle(body, _startPosX, _startPosY - 5, 90, 30);
+            g.FillRectangle(general, _startPosX + 10, _startPosY - 20, 60, 15);
+            g.FillRectangle(tube, _startPosX + 30, _startPosY - 40, 15, 20);
+            while (yline < 25)
+            {
+                g.DrawLine(pen, _startPosX, _startPosY + yline, _startPosX - 30, _startPosY - 18);
 
-                g.DrawLine(pen, _startPosX + 200, _startPosY + 30, _startPosX + 250, _startPosY - 30);
+                g.DrawLine(pen, _startPosX + 90, _startPosY + yline, _startPosX + 120, _startPosY - 18);
+                yline++;
+            }
 
-               
 
-            
+
         }
     }
 
