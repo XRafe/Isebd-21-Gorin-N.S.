@@ -51,7 +51,7 @@ namespace Lab1Var5
                 while (xline < 65)
                 {
 
-                    g.DrawLine(pen2, _startPosX + 20 + xline, _startPosY + 10, _startPosX + xline, _startPosY + 55);
+                    g.DrawLine(pen2, _startPosX + 20 + xline, _startPosY + 20, _startPosX + xline, _startPosY + 55);
                     xline += 5;
 
                 }
@@ -62,7 +62,7 @@ namespace Lab1Var5
                 while (yline < 35)
                 {
 
-                    g.DrawLine(pen, _startPosX + 70, _startPosY + 20, _startPosX + 100, _startPosY + yline);
+                    g.DrawLine(pen, _startPosX + 70, _startPosY + 30, _startPosX + 100, _startPosY + 10 + yline);
                     yline += 1;
 
                 }
@@ -70,7 +70,7 @@ namespace Lab1Var5
 
             if (Wheel)
             {
-                g.FillEllipse(Wh, _startPosX + 10, _startPosY + 25, 40, 40);
+                g.FillEllipse(Wh, _startPosX + 10, _startPosY + 35, 40, 40);
             }
 
 

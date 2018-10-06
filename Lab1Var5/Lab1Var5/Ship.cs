@@ -90,14 +90,14 @@ namespace Lab1Var5
 
 
 
-            g.FillRectangle(body, _startPosX + 10, _startPosY + 25, 90, 30);
-            g.FillRectangle(general, _startPosX + 20, _startPosY + 10, 60, 15);
-            g.FillRectangle(tube, _startPosX + 40, _startPosY - 10, 15, 20);
+            g.FillRectangle(body, _startPosX + 10, _startPosY + 35, 90, 30);
+            g.FillRectangle(general, _startPosX + 20, _startPosY + 20, 60, 15);
+            g.FillRectangle(tube, _startPosX + 40, _startPosY , 15, 20);
             while (yline < 25)
             {
-                g.DrawLine(pen, _startPosX + 10, _startPosY + 30 + yline, _startPosX - 20, _startPosY + 12);
+                g.DrawLine(pen, _startPosX + 10, _startPosY + 40 + yline, _startPosX - 5, _startPosY + 12);
 
-                g.DrawLine(pen, _startPosX + 100, _startPosY + 30 + yline, _startPosX + 130, _startPosY + 12);
+                g.DrawLine(pen, _startPosX + 100, _startPosY + 40 + yline, _startPosX + 115, _startPosY + 12);
                 yline++;
             }
 
