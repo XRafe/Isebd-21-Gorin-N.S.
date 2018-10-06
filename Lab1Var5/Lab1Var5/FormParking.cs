@@ -33,11 +33,8 @@ namespace Lab1Var5
             parking.Draw(gr);
             pictureBox1.Image = bmp;
         }
-        /// <summary>
-        /// Обработка нажатия кнопки "Припарковать автомобиль"
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+  
+
         private void button2_Click(object sender, EventArgs e)
         {
             ColorDialog dialog = new ColorDialog();
@@ -48,13 +45,13 @@ namespace Lab1Var5
                 Draw();
             }
         }
-        /// <summary>
-        /// Обработка нажатия кнопки "Припарковать гоночный автомобиль"
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+
+
         private void button3_Click_1(object sender, EventArgs e)
         {
+
+
+
             ColorDialog dialog = new ColorDialog();
             if (dialog.ShowDialog() == DialogResult.OK)
             {
@@ -85,7 +82,7 @@ namespace Lab1Var5
                     Graphics gr = Graphics.FromImage(bmp);
                     car.SetPosition(5, 5, pictureBox2.Width,
                    pictureBox2.Height);
-                    car.DrawCar(gr);
+                    car.DrawShip(gr);
                     pictureBox2.Image = bmp;
                 }
                 else
@@ -95,7 +92,8 @@ namespace Lab1Var5
                     pictureBox2.Image = bmp;
                 }
                 Draw();
-            }
+            }
+
         }
 
     }

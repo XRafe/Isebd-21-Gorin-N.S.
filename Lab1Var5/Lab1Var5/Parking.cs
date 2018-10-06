@@ -108,7 +108,7 @@ namespace Lab1Var5
             {
                 if (!CheckFreePlace(i))
                 {//если место не пустое
-                    _places[i].DrawCar(g);
+                    _places[i].DrawShip(g);
                 }
             }
         }
