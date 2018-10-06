@@ -12,7 +12,7 @@ namespace Lab1Var5
 {
     public partial class FormShip : Form
     {
-        private Ship car;
+        private Ship ship;
         /// <summary>
         /// Конструктор
         /// </summary>
@@ -20,14 +20,13 @@ namespace Lab1Var5
         {
             InitializeComponent();
         }
-        /// <summary>
-        /// Метод отрисовки машины
-        /// </summary>
+
+
         private void Draw()
         {
             Bitmap bmp = new Bitmap(pictureBoxCars.Width, pictureBoxCars.Height);
             Graphics gr = Graphics.FromImage(bmp);
-            car.DrawShip(gr);
+            ship.DrawShip(gr);
             pictureBoxCars.Image = bmp;
         }
         /// <summary>
@@ -38,8 +37,8 @@ namespace Lab1Var5
         private void buttonCreate_Click(object sender, EventArgs e)
         {
             Random rnd = new Random();
-            car = new Ship(rnd.Next(100, 300), rnd.Next(1000, 2000), Color.Blue);
-            car.SetPosition(rnd.Next(10, 100), rnd.Next(10, 100), pictureBoxCars.Width,
+            ship = new Ship(rnd.Next(100, 300), rnd.Next(1000, 2000), Color.Blue);
+            ship.SetPosition(rnd.Next(10, 100), rnd.Next(10, 100), pictureBoxCars.Width,
            pictureBoxCars.Height);
             Draw();
         }
@@ -55,16 +54,16 @@ namespace Lab1Var5
             switch (name)
             {
                 case "buttonUp":
-                    car.MoveTransport(Direction.Up);
+                    ship.MoveTransport(Direction.Up);
                     break;
                 case "buttonDown":
-                    car.MoveTransport(Direction.Down);
+                    ship.MoveTransport(Direction.Down);
                     break;
                 case "buttonLeft":
-                    car.MoveTransport(Direction.Left);
+                    ship.MoveTransport(Direction.Left);
                     break;
                 case "buttonRight":
-                    car.MoveTransport(Direction.Right);
+                    ship.MoveTransport(Direction.Right);
                     break;
             }
             Draw();
@@ -78,9 +77,9 @@ namespace Lab1Var5
         private void button1_Click(object sender, EventArgs e)
         {
             Random rnd = new Random();
-            car = new WaterCar(rnd.Next(100, 300), rnd.Next(1000, 2000), Color.Blue,
+            ship = new WaterCar(rnd.Next(100, 300), rnd.Next(1000, 2000), Color.Blue,
            Color.Yellow, true, true, true);
-            car.SetPosition(rnd.Next(10, 100), rnd.Next(10, 100), pictureBoxCars.Width,
+            ship.SetPosition(rnd.Next(10, 100), rnd.Next(10, 100), pictureBoxCars.Width,
            pictureBoxCars.Height);
             Draw();
         }
