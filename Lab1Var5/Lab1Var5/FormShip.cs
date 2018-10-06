@@ -27,7 +27,7 @@ namespace Lab1Var5
         {
             Bitmap bmp = new Bitmap(pictureBoxCars.Width, pictureBoxCars.Height);
             Graphics gr = Graphics.FromImage(bmp);
-            car.DrawCar(gr);
+            car.DrawShip(gr);
             pictureBoxCars.Image = bmp;
         }
         /// <summary>

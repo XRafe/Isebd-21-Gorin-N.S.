@@ -14,29 +14,15 @@ namespace Lab1Var5
         /// Дополнительный цвет
         /// </summary>
         public Color DopColor { private set; get; }
-        /// <summary>
-        /// Признак наличия переднего спойлера
-        /// </summary>
-        public bool FrontSpoiler { private set; get; }
-        /// <summary>
-        /// Признак наличия боковых спойлеров
-        /// </summary>
-        public bool SideSpoiler { private set; get; }
-        /// <summary>
-        /// Признак наличия заднего спойлера
-        /// </summary>
-        public bool BackSpoiler { private set; get; }
+
  
         public WaterCar(int maxSpeed, float weight, Color mainColor, Color dopColor, bool
        frontSpoiler, bool sideSpoiler, bool backSpoiler) : 
             base (maxSpeed, weight, mainColor)
         {
             DopColor = dopColor;
-            FrontSpoiler = frontSpoiler;
-            SideSpoiler = sideSpoiler;
-            BackSpoiler = backSpoiler;
         }
-        public override void DrawCar(Graphics g)
+        public override void DrawShip(Graphics g)
         {
             Pen pen = new Pen(Color.Black);
 
@@ -44,7 +30,7 @@ namespace Lab1Var5
             int xline = 0;
            
 
-                base.DrawCar(g);
+                base.DrawShip(g);
                 Brush reactive = new SolidBrush(Color.Black);
                 Brush gun1 = new SolidBrush(Color.DarkRed);
 

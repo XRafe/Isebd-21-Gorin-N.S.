@@ -27,15 +27,10 @@ namespace Lab1Var5
 
     
 
-        /// </summary>
         protected const int carWidth = 240;
-        /// <summary>
-        /// Ширина отрисовки автомобиля
-        /// </summary>
+
         protected const int carHeight = 60;
-        /// <summary>
-        /// Максимальная скорость
-        /// </summary>
+
  
         public Ship(int maxSpeed, float weight, Color mainColor)
         {
@@ -79,11 +74,8 @@ namespace Lab1Var5
                     break;
             }
         }
-        /// <summary>
-        /// Отрисовка автомобиля
-        /// </summary>
-        /// <param name="g"></param>
-        public override void DrawCar(Graphics g)
+
+        public override void DrawShip(Graphics g)
         {
             int yline = -5;
 
