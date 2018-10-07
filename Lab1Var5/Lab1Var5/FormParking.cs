@@ -13,55 +13,87 @@ namespace Lab1Var5
     public partial class FormParking : Form
     {
         /// <summary>
-        /// Объект от класса-парковки
+        /// Объект от класса многоуровневой парковки
         /// </summary>
-        Parking<ITransport> parking;
+        MultiLevelParking parking;
+        /// <summary>
+        /// Количество уровней-парковок
+        /// </summary>
+        private const int countLevel = 5;
         public FormParking()
         {
             InitializeComponent();
-            parking = new Parking<ITransport>(20, pictureBox1.Width,
-           pictureBox1.Height);
-            Draw();
+            parking = new MultiLevelParking(countLevel, pictureBoxParking.Width,
+           pictureBoxParking.Height);
+            //заполнение listBox
+            for (int i = 0; i < countLevel; i++)
+            {
+                listBoxLevels.Items.Add("Уровень " + (i + 1));
+            }
+            listBoxLevels.SelectedIndex = 0;
         }
         /// <summary>
         /// Метод отрисовки парковки
         /// </summary>
         private void Draw()
         {
-            Bitmap bmp = new Bitmap(pictureBox1.Width, pictureBox1.Height);
-            Graphics gr = Graphics.FromImage(bmp);
-            parking.Draw(gr);
-            pictureBox1.Image = bmp;
-        }
-  
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            ColorDialog dialog = new ColorDialog();
-            if (dialog.ShowDialog() == DialogResult.OK)
+            if (listBoxLevels.SelectedIndex > -1)
             {
-                var ship = new Ship(100, 1000, dialog.Color);
-                int place = parking + ship;
-                Draw();
+                Bitmap bmp = new Bitmap(pictureBoxParking.Width,
+  pictureBoxParking.Height);
+                Graphics gr = Graphics.FromImage(bmp);
+                parking[listBoxLevels.SelectedIndex].Draw(gr);
+                pictureBoxParking.Image = bmp;
             }
         }
-
-
-        private void button3_Click_1(object sender, EventArgs e)
+        /// <summary>
+        /// Обработка нажатия кнопки "Припарковать автомобиль"
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void buttonSetShip_Click(object sender, EventArgs e)
         {
-
-
-
-            ColorDialog dialog = new ColorDialog();
-            if (dialog.ShowDialog() == DialogResult.OK)
+            if (listBoxLevels.SelectedIndex > -1)
             {
-                ColorDialog dialogDop = new ColorDialog();
-                if (dialogDop.ShowDialog() == DialogResult.OK)
+                ColorDialog dialog = new ColorDialog();
+                if (dialog.ShowDialog() == DialogResult.OK)
                 {
-                    var ship = new WaterCar(100, 1000, dialog.Color, dialogDop.Color,
-                   true, true, true);
-                    int place = parking + ship;
+                    var car = new Ship(100, 1000, dialog.Color);
+                    int place = parking[listBoxLevels.SelectedIndex] + car;
+                    if (place == -1)
+                    {
+                        MessageBox.Show("Нет свободных мест", "Ошибка",
+                       MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                     Draw();
+                }
+            }
+        }
+        /// <summary>
+        /// Обработка нажатия кнопки "Припарковать гоночный автомобиль"
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void buttonSetTuningShip_Click(object sender, EventArgs e)
+        {
+            if (listBoxLevels.SelectedIndex > -1)
+            {
+                ColorDialog dialog = new ColorDialog();
+                if (dialog.ShowDialog() == DialogResult.OK)
+                {
+                    ColorDialog dialogDop = new ColorDialog();
+                    if (dialogDop.ShowDialog() == DialogResult.OK)
+                    {
+                        var car = new WaterCar(100, 1000, dialog.Color, dialogDop.Color,
+                       true, true, true);
+                        int place = parking[listBoxLevels.SelectedIndex] + car;
+                        if (place == -1)
+                        {
+                            MessageBox.Show("Нет свободных мест", "Ошибка",
+                           MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                        Draw();
+                    }
                 }
             }
         }
@@ -70,30 +102,42 @@ namespace Lab1Var5
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void button1_Click(object sender, EventArgs e)
+        private void buttonTakeShip_Click(object sender, EventArgs e)
         {
-            if (maskedTextBox1.Text != "")
+            if (listBoxLevels.SelectedIndex > -1)
             {
-                var car = parking - Convert.ToInt32(maskedTextBox1.Text);
-                if (car != null)
+                if (maskedTextBox.Text != "")
                 {
-                    Bitmap bmp = new Bitmap(pictureBox2.Width,
-                   pictureBox2.Height);
-                    Graphics gr = Graphics.FromImage(bmp);
-                    car.SetPosition(5, 5, pictureBox2.Width,
-                   pictureBox2.Height);
-                    car.DrawShip(gr);
-                    pictureBox2.Image = bmp;
+                    var ship = parking[listBoxLevels.SelectedIndex] -
+                   Convert.ToInt32(maskedTextBox.Text);
+                    if (ship != null)
+                    {
+                        Bitmap bmp = new Bitmap(pictureBoxTakeShip.Width,
+                       pictureBoxTakeShip.Height);
+                        Graphics gr = Graphics.FromImage(bmp);
+                        ship.SetPosition(5, 5, pictureBoxTakeShip.Width,
+                       pictureBoxTakeShip.Height);
+                        ship.DrawShip(gr);
+                        pictureBoxTakeShip.Image = bmp;
+                    }
+                    else
+                    {
+                        Bitmap bmp = new Bitmap(pictureBoxTakeShip.Width,
+                       pictureBoxTakeShip.Height);
+                        pictureBoxTakeShip.Image = bmp;
+                    }
+                    Draw();
                 }
-                else
-                {
-                    Bitmap bmp = new Bitmap(pictureBox2.Width,
-                   pictureBox2.Height);
-                    pictureBox2.Image = bmp;
-                }
-                Draw();
             }
-
+        }
+        /// <summary>
+        /// Метод обработки выбора элемента на listBoxLevels
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void listBoxLevels_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Draw();
         }
 
     }
