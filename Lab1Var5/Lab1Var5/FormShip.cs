@@ -13,6 +13,7 @@ namespace Lab1Var5
     public partial class FormShip : Form
     {
         private Ship ship;
+
         /// <summary>
         /// Конструктор
         /// </summary>
@@ -42,6 +43,9 @@ namespace Lab1Var5
            pictureBoxCars.Height);
             Draw();
         }
+
+
+
         /// <summary>
         /// Обработка нажатия кнопок управления
         /// </summary>

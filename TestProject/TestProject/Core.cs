@@ -12,25 +12,81 @@ namespace TestProject
         int[] a = new int[100];
         int num = 0;
         int i = 0;
-        public void GeneralTr(int x, int snFirst)
+        public void GeneralTr(string str, int snFirst)
         {
-            for (int j = 0; x > 0; j++)
+            try
             {
-                int temp = 0;
-                temp = x % 10;
-                x = x / 10;
-                for (int l = 0; l<j; l++)
+                if (snFirst < 10)
                 {
-                    temp *= temp;
+                    int x = Convert.ToInt32(str);
+                    for (int j = 0; x > 0; j++)
+                    {
+                        int temp = 0;
+                        int step = 1;
+                        temp = x % 10;
+                        x = x / 10;
+                        for (int l = 0; l < j; l++)
+                        {
+                            step *= snFirst;
+                        }
+                        num += step * temp;
+                    }
                 }
-                num += temp;
+                if (snFirst > 10)
+                {
+                    char[] part = str.ToArray();
+                    string temp = "";
+                    int x = 0;
+                    int step = 1;
+                    for (int i = part.Length, k=0; i > 0; i--, k++)
+                    {
+                        if (part[i] == 'A')
+                        {
+                            x = 10;
+                        }
+                        if (part[i] == 'B')
+                        {
+                            x = 11;
+                        }
+                        if (part[i] == 'C')
+                        {
+                            x = 12;
+                        }
+                        if (part[i] == 'D')
+                        {
+                            x = 13;
+                        }
+                        if (part[i] == 'E')
+                        {
+                            x = 14;
+                        }
+                        if (part[i] == 'F')
+                        {
+                            x=15;
+                        }
+
+                        for (int l = 0; l < k; l++)
+                        {
+                            step *= snFirst;
+                        }
+                        num += step * x;
+
+                    }
+                }
             }
+            catch (Exception error)
+            {
+                Console.WriteLine(error.Message);
+            }
+            
+           
 
         }
+        
 
         public void TrInSn(int snEnd)
         {
-            for (i = 0; num > 1; i++)
+            for (i = 0; num >= 1; i++)
             {
                 a[i] = num % snEnd;
                 num = num / snEnd;
