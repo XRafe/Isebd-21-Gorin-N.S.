@@ -13,8 +13,8 @@ namespace Lab2AISD
 
             IList<Node> list = new List<Node>();
 
-            //int[] array = new int[]{45, 13, 12, 16, 9, 5};
-            int[] array = new int[] { 18, 25, 21, 17, 5, 14 };
+            int[] array = new int[]{45, 13, 12, 16, 9, 5};
+            //int[] array = new int[] { 18, 25, 21, 17, 5, 14 };
 
             for (int i = 0; i < array.Length; i++)
             {
