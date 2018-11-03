@@ -90,31 +90,39 @@
             this.panelShip.Controls.Add(this.pictureBoxShip);
             this.panelShip.Location = new System.Drawing.Point(160, 12);
             this.panelShip.Name = "panelShip";
-            this.panelShip.Size = new System.Drawing.Size(200, 232);
+            this.panelShip.Size = new System.Drawing.Size(414, 307);
             this.panelShip.TabIndex = 2;
+            this.panelShip.DragDrop += new System.Windows.Forms.DragEventHandler(this.panelShip_DragDrop);
+            this.panelShip.DragEnter += new System.Windows.Forms.DragEventHandler(this.panelShip_DragEnter);
             // 
             // labelDopColor
             // 
+            this.labelDopColor.AllowDrop = true;
             this.labelDopColor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.labelDopColor.Location = new System.Drawing.Point(12, 181);
+            this.labelDopColor.Location = new System.Drawing.Point(122, 181);
             this.labelDopColor.Name = "labelDopColor";
             this.labelDopColor.Size = new System.Drawing.Size(175, 25);
             this.labelDopColor.TabIndex = 2;
             this.labelDopColor.Text = "Дополнительный цвет";
+            this.labelDopColor.DragDrop += new System.Windows.Forms.DragEventHandler(this.labelDopColor_DragDrop);
+            this.labelDopColor.DragEnter += new System.Windows.Forms.DragEventHandler(this.labelBaseColor_DragEnter);
             // 
             // labelBaseColor
             // 
+            this.labelBaseColor.AllowDrop = true;
             this.labelBaseColor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.labelBaseColor.Location = new System.Drawing.Point(12, 138);
+            this.labelBaseColor.Location = new System.Drawing.Point(122, 138);
             this.labelBaseColor.Name = "labelBaseColor";
             this.labelBaseColor.Size = new System.Drawing.Size(175, 29);
             this.labelBaseColor.TabIndex = 2;
             this.labelBaseColor.Text = "Основной цвет";
+            this.labelBaseColor.DragDrop += new System.Windows.Forms.DragEventHandler(this.labelBaseColor_DragDrop);
+            this.labelBaseColor.DragEnter += new System.Windows.Forms.DragEventHandler(this.labelBaseColor_DragEnter);
             // 
             // pictureBoxShip
             // 
             this.pictureBoxShip.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBoxShip.Location = new System.Drawing.Point(12, 12);
+            this.pictureBoxShip.Location = new System.Drawing.Point(122, 12);
             this.pictureBoxShip.Name = "pictureBoxShip";
             this.pictureBoxShip.Size = new System.Drawing.Size(175, 123);
             this.pictureBoxShip.TabIndex = 0;
@@ -124,7 +132,7 @@
             // 
             this.panelBlack.BackColor = System.Drawing.SystemColors.ControlText;
             this.panelBlack.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panelBlack.Location = new System.Drawing.Point(366, 12);
+            this.panelBlack.Location = new System.Drawing.Point(581, 12);
             this.panelBlack.Name = "panelBlack";
             this.panelBlack.Size = new System.Drawing.Size(30, 30);
             this.panelBlack.TabIndex = 1;
@@ -133,7 +141,7 @@
             // 
             this.panelWhite.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.panelWhite.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panelWhite.Location = new System.Drawing.Point(402, 12);
+            this.panelWhite.Location = new System.Drawing.Point(616, 12);
             this.panelWhite.Name = "panelWhite";
             this.panelWhite.Size = new System.Drawing.Size(30, 30);
             this.panelWhite.TabIndex = 2;
@@ -142,7 +150,7 @@
             // 
             this.panelGreen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.panelGreen.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panelGreen.Location = new System.Drawing.Point(366, 48);
+            this.panelGreen.Location = new System.Drawing.Point(580, 48);
             this.panelGreen.Name = "panelGreen";
             this.panelGreen.Size = new System.Drawing.Size(30, 30);
             this.panelGreen.TabIndex = 2;
@@ -151,7 +159,7 @@
             // 
             this.panelBlue.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.panelBlue.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panelBlue.Location = new System.Drawing.Point(402, 48);
+            this.panelBlue.Location = new System.Drawing.Point(616, 48);
             this.panelBlue.Name = "panelBlue";
             this.panelBlue.Size = new System.Drawing.Size(30, 30);
             this.panelBlue.TabIndex = 2;
@@ -160,7 +168,7 @@
             // 
             this.panelGold.BackColor = System.Drawing.Color.Yellow;
             this.panelGold.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panelGold.Location = new System.Drawing.Point(402, 84);
+            this.panelGold.Location = new System.Drawing.Point(616, 84);
             this.panelGold.Name = "panelGold";
             this.panelGold.Size = new System.Drawing.Size(30, 30);
             this.panelGold.TabIndex = 2;
@@ -169,7 +177,7 @@
             // 
             this.panelRed.BackColor = System.Drawing.Color.Red;
             this.panelRed.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panelRed.Location = new System.Drawing.Point(366, 84);
+            this.panelRed.Location = new System.Drawing.Point(580, 84);
             this.panelRed.Name = "panelRed";
             this.panelRed.Size = new System.Drawing.Size(30, 30);
             this.panelRed.TabIndex = 2;
@@ -178,7 +186,7 @@
             // 
             this.panelGray.BackColor = System.Drawing.Color.Gray;
             this.panelGray.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panelGray.Location = new System.Drawing.Point(366, 118);
+            this.panelGray.Location = new System.Drawing.Point(580, 120);
             this.panelGray.Name = "panelGray";
             this.panelGray.Size = new System.Drawing.Size(30, 30);
             this.panelGray.TabIndex = 2;
@@ -187,7 +195,7 @@
             // 
             this.panelPink.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.panelPink.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panelPink.Location = new System.Drawing.Point(402, 118);
+            this.panelPink.Location = new System.Drawing.Point(616, 120);
             this.panelPink.Name = "panelPink";
             this.panelPink.Size = new System.Drawing.Size(30, 30);
             this.panelPink.TabIndex = 2;
@@ -216,7 +224,7 @@
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(454, 256);
+            this.ClientSize = new System.Drawing.Size(658, 331);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.buttonAdd);
             this.Controls.Add(this.panelPink);

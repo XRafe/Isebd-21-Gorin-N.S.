@@ -28,7 +28,6 @@ namespace Lab1Var5
        wheel, bool decoreation, bool whistle) :
             base(maxSpeed, weight, mainColor)
         {
-            MainColor = mainColor;
             DopColor = dopColor;
             Wheel = wheel;
             Decoreation = decoreation;

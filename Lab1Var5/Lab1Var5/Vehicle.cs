@@ -36,7 +36,8 @@ namespace Lab1Var5
         public void SetMainColor(Color color)
         {
             MainColor = color;
-        }
+        }
+
 
         public void SetPosition(int x, int y, int width, int height)
         {

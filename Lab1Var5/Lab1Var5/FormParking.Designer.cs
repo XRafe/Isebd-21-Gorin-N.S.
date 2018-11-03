@@ -98,6 +98,7 @@
             this.listBoxLevels.Name = "listBoxLevels";
             this.listBoxLevels.Size = new System.Drawing.Size(176, 95);
             this.listBoxLevels.TabIndex = 8;
+            this.listBoxLevels.SelectedIndexChanged += new System.EventHandler(this.listBoxLevels_SelectedIndexChanged_1);
             // 
             // buttonSetShip
             // 
