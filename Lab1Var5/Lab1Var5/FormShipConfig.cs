@@ -87,6 +87,23 @@ namespace Lab1Var5
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
+
+        private void panelShip_DragDrop(object sender, DragEventArgs e)
+        {
+            switch (e.Data.GetData(DataFormats.Text).ToString())
+            {
+                case "Обычный корабль":
+                    ship = new Ship(100, 500, Color.White);
+                    break;
+                case "Тюнинг корабль":
+                    ship = new WaterCar(100, 500, Color.White, Color.Black, true, true,
+                   true);
+                    break;
+            }
+            DrawShip();
+        }
+
+
         private void panelShip_DragEnter(object sender, DragEventArgs e)
         {
             if (e.Data.GetDataPresent(DataFormats.Text))
@@ -103,20 +120,7 @@ namespace Lab1Var5
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void panelShip_DragDrop(object sender, DragEventArgs e)
-        {
-            switch (e.Data.GetData(DataFormats.Text).ToString())
-            {
-                case "Обычный корабль":
-                    ship = new Ship(100, 500, Color.White);
-                    break;
-                case "Тюнинг корабль":
-                    ship = new WaterCar(100, 500, Color.White, Color.Black, true, true,
-                   true);
-                    break;
-            }
-            DrawShip();
-        }
+
         /// <summary>
         /// Отправляем цвет с панели
         /// </summary>
@@ -131,17 +135,7 @@ namespace Lab1Var5
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void labelBaseColor_DragEnter(object sender, DragEventArgs e)
-        {
-            if (e.Data.GetDataPresent(typeof(Color)))
-            {
-                e.Effect = DragDropEffects.Copy;
-            }
-            else
-            {
-                e.Effect = DragDropEffects.None;
-            }
-        }
+
         /// <summary>
         /// Принимаем основной цвет
         /// </summary>
@@ -153,6 +147,18 @@ namespace Lab1Var5
             {
                 ship.SetMainColor((Color)e.Data.GetData(typeof(Color)));
                 DrawShip();
+            }
+        }
+
+        private void labelBaseColor_DragEnter(object sender, DragEventArgs e)
+        {
+            if (e.Data.GetDataPresent(typeof(Color)))
+            {
+                e.Effect = DragDropEffects.Copy;
+            }
+            else
+            {
+                e.Effect = DragDropEffects.None;
             }
         }
         /// <summary>
