@@ -135,10 +135,12 @@ namespace Lab1Var5
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void listBoxLevels_SelectedIndexChanged(object sender, EventArgs e)
+
+
+        private void listBoxLevels_SelectedIndexChanged_1(object sender, EventArgs e)
         {
+
             Draw();
         }
-
     }
 }

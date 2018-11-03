@@ -30,6 +30,7 @@ namespace Lab1Var5
                 parkingStages.Add(new Parking<ITransport>(countPlaces, pictureWidth,
                pictureHeight));
             }
+
         }
         /// <summary>
         /// Индексатор
@@ -46,6 +47,7 @@ namespace Lab1Var5
                 }
                 return null;
             }
-        }
+        }
+
     }
 }
