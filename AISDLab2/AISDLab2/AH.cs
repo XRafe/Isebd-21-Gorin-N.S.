@@ -12,6 +12,15 @@ namespace AISDLab2
         {
             string str = Console.ReadLine();
             char[] text = str.ToCharArray();
+            Node node = new Node (Key,)
+
+            for (int i=0; i<text.Length; i++)
+            {
+                if ()
+            }
+
+        }
+
 
 
         }

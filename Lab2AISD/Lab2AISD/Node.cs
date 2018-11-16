@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Lab2AISD
 {
-    class Node
+    public class Node
     {
         public int frequency;
         public string data;

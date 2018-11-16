@@ -129,7 +129,8 @@ namespace Lab1Var5
         private void panelColor_MouseDown(object sender, MouseEventArgs e)
         {
             (sender as Control).DoDragDrop((sender as Control).BackColor,
-DragDropEffects.Move | DragDropEffects.Copy);
+DragDropEffects.Move | DragDropEffects.Copy);
+
         }
         /// <summary>
         /// Проверка получаемой информации (ее типа на соответствие требуемому)

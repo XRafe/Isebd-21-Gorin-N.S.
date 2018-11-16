@@ -13,13 +13,26 @@ namespace Lab2AISD
 
             IList<Node> list = new List<Node>();
 
-            int[] array = new int[]{45, 13, 12, 16, 9, 5};
-            //int[] array = new int[] { 18, 25, 21, 17, 5, 14 };
+           
+            string[] array = new string[]{"a", "b", "c", "d", "e", "f"};
+            
+            
+        //    for (int j = 0; j < array.Length; j++)
+          //  {
+                for (int i = 0; i < array.Length; i++)
+                {
+                 list.Add(new Node("" + array[i], i));
+                   /* if (array[j] == array[i])
+                    {
 
-            for (int i = 0; i < array.Length; i++)
-            {
-                list.Add(new Node("S" + (i + 1), array[i]));
+                    }
+                    else
+                    {
+                       
+                    }*/
+            //    }
             }
+
 
             Stack<Node> stack = GetSortedStack(list);
 
@@ -39,8 +52,7 @@ namespace Lab2AISD
 
             GenerateCode(parentNode1, "");
 
-            DecodeData(parentNode1, parentNode1, 0, "0010011101001111");
-            //DecodeData(parentNode1, parentNode1, 0, "100");
+            DecodeData(parentNode1, parentNode1, 0, "1001001001000010010011101001111");
 
             Console.ReadKey();
         }
@@ -75,19 +87,24 @@ namespace Lab2AISD
                 GenerateCode(parentNode.leftChild, code + "0");
 
                 if (parentNode.leftChild == null && parentNode.rightChild == null)
-                    Console.WriteLine(parentNode.data + "{" + code + "}");
+                    Console.WriteLine("Символ: " + parentNode.data + " Код: " + code);
 
                 GenerateCode(parentNode.rightChild, code + "1");
             }
         }
 
+
+        static string TextEnd = "";
+        static int l = 0;
+
         public static void DecodeData(Node parentNode, Node currentNode, int pointer, string input)
         {
+
             if (input.Length == pointer)
             {
                 if (currentNode.leftChild == null && currentNode.rightChild == null)
                 {
-                    Console.WriteLine(currentNode.data);
+                    TextEnd = TextEnd + currentNode.data;
                 }
 
                 return;
@@ -96,7 +113,7 @@ namespace Lab2AISD
             {
                 if (currentNode.leftChild == null && currentNode.rightChild == null)
                 {
-                    Console.WriteLine(currentNode.data);
+                    TextEnd = TextEnd + currentNode.data;
                     DecodeData(parentNode, parentNode, pointer, input);
                 }
                 else
@@ -110,6 +127,11 @@ namespace Lab2AISD
                         DecodeData(parentNode, currentNode.rightChild, ++pointer, input);
                     }
                 }
+            }
+
+            if (l==0) {
+                Console.WriteLine(TextEnd);
+                l++;
             }
         }
     }

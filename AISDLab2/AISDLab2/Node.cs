@@ -15,7 +15,7 @@ namespace AISDLab2
         public Node Right { get; set; }
 
 
-        public Node(string Char, int Key)
+        public Node(string Char, int Key, Node Left, Node Right)
         {
             this.Char = Char;
             this.Key = Key;
