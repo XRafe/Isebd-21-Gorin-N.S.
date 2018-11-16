@@ -10,9 +10,8 @@ namespace Lab1Var5
 {
     public class WaterCar : Ship
     {
-        /// <summary>
-        /// Дополнительный цвет
-        /// </summary>
+      
+
         public Color DopColor { private set; get; }
 
         public bool Wheel { private set; get; }
