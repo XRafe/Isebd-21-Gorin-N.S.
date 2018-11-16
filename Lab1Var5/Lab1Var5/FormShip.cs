@@ -12,43 +12,35 @@ namespace Lab1Var5
 {
     public partial class FormShip : Form
     {
-        private Ship car;
-        /// <summary>
-        /// Конструктор
-        /// </summary>
+        private Ship ship;
+
+
         public FormShip()
         {
             InitializeComponent();
         }
-        /// <summary>
-        /// Метод отрисовки машины
-        /// </summary>
+       
+
         private void Draw()
         {
             Bitmap bmp = new Bitmap(pictureBoxCars.Width, pictureBoxCars.Height);
             Graphics gr = Graphics.FromImage(bmp);
-            car.DrawCar(gr);
+            ship.DrawCar(gr);
             pictureBoxCars.Image = bmp;
         }
-        /// <summary>
-        /// Обработка нажатия кнопки "Создать"
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+
+
         private void buttonCreate_Click(object sender, EventArgs e)
         {
             Random rnd = new Random();
-            car = new Ship(rnd.Next(100, 300), rnd.Next(1000, 2000), Color.Blue,
+            ship = new Ship(rnd.Next(100, 300), rnd.Next(1000, 2000), Color.Blue,
            Color.Yellow, true, true, true);
-            car.SetPosition(rnd.Next(10, 100), rnd.Next(10, 100), pictureBoxCars.Width,
+            ship.SetPosition(rnd.Next(10, 100), rnd.Next(10, 100), pictureBoxCars.Width,
            pictureBoxCars.Height);
             Draw();
         }
-        /// <summary>
-        /// Обработка нажатия кнопок управления
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+
+
         private void buttonMove_Click(object sender, EventArgs e)
         {
             //получаем имя кнопки
@@ -56,16 +48,16 @@ namespace Lab1Var5
             switch (name)
             {
                 case "buttonUp":
-                    car.MoveTransport(Direction.Up);
+                    ship.MoveTransport(Direction.Up);
                     break;
                 case "buttonDown":
-                    car.MoveTransport(Direction.Down);
+                    ship.MoveTransport(Direction.Down);
                     break;
                 case "buttonLeft":
-                    car.MoveTransport(Direction.Left);
+                    ship.MoveTransport(Direction.Left);
                     break;
                 case "buttonRight":
-                    car.MoveTransport(Direction.Right);
+                    ship.MoveTransport(Direction.Right);
                     break;
             }
             Draw();
