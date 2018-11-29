@@ -8,11 +8,6 @@ using System.Threading.Tasks;
 namespace Lab1Var5
 {
 
-
-
-
-
-
     public class Ship
     {
 
