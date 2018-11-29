@@ -9,13 +9,13 @@ namespace Lab1Var5
 {
     class MultiLevelParking
     {
- 
+
 
         List<Parking<ITransport>> parkingStages;
 
 
         private const int countPlaces = 20;
-        
+
 
         private int pictureWidth;
 
@@ -34,7 +34,7 @@ namespace Lab1Var5
                pictureHeight));
             }
         }
-        
+
 
         public Parking<ITransport> this[int ind]
         {
@@ -58,12 +58,12 @@ namespace Lab1Var5
             {
                 using (BufferedStream bs = new BufferedStream(fs))
                 {
-        
+
                     WriteToFile("CountLeveles:" + parkingStages.Count +
                    Environment.NewLine, fs);
                     foreach (var level in parkingStages)
                     {
-                        
+
 
                         WriteToFile("Level" + Environment.NewLine, fs);
                         for (int i = 0; i < countPlaces; i++)
@@ -80,7 +80,7 @@ namespace Lab1Var5
                                 {
                                     WriteToFile(i + ":WaterCar:", fs);
                                 }
-                        
+
 
                                 WriteToFile(ship + Environment.NewLine, fs);
                             }
@@ -97,7 +97,7 @@ namespace Lab1Var5
             stream.Write(info, 0, info.Length);
         }
 
-        
+
 
         public bool LoadData(string filename)
         {
@@ -133,18 +133,18 @@ namespace Lab1Var5
             }
             else
             {
-                
+
                 return false;
             }
             int counter = -1;
             ITransport ship = null;
             for (int i = 1; i < strs.Length; ++i)
             {
-                
+
 
                 if (strs[i] == "Level")
                 {
-                
+
 
                     counter++;
                     parkingStages.Add(new Parking<ITransport>(countPlaces, pictureWidth,

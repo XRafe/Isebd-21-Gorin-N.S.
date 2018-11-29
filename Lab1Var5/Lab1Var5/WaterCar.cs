@@ -34,7 +34,7 @@ namespace Lab1Var5
         }
 
         public WaterCar(string info) : base(info)
- {
+        {
             string[] strs = info.Split(';');
             if (strs.Length == 7)
             {
