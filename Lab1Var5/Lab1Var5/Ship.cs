@@ -8,30 +8,15 @@ using System.Drawing;
 
 namespace Lab1Var5
 {
-    public enum Direction
 
-    {
-        Up,
-        Down,
-        Left,
-        Right
-    }
-
-
-
-    /// <summary>
-    /// Класс отрисовки корабля
-    /// </summary>
     public class Ship : Vehicle
     {
+        
+        protected const int ShipWidth = 240;
 
-    
+        protected const int ShipHeight = 60;
 
-        protected const int carWidth = 240;
 
-        protected const int carHeight = 60;
-
- 
         public Ship(int maxSpeed, float weight, Color mainColor)
         {
             MaxSpeed = maxSpeed;
@@ -46,7 +31,7 @@ namespace Lab1Var5
             {
                 // вправо
                 case Direction.Right:
-                    if (_startPosX + step < _pictureWidth - carWidth)
+                    if (_startPosX + step < _pictureWidth - ShipWidth)
                     {
                         _startPosX += step;
                     }
@@ -67,7 +52,7 @@ namespace Lab1Var5
                     break;
                 //вниз
                 case Direction.Down:
-                    if (_startPosY + step < _pictureHeight - carHeight)
+                    if (_startPosY + step < _pictureHeight - ShipHeight)
                     {
                         _startPosY += step;
                     }
@@ -85,21 +70,21 @@ namespace Lab1Var5
             Pen pen = new Pen(Color.Green);
 
 
-                g.FillRectangle(body, _startPosX, _startPosY - 5, 90, 30);
-                g.FillRectangle(general, _startPosX + 10, _startPosY - 20, 60, 15);
-                g.FillRectangle(tube, _startPosX + 30, _startPosY - 40, 15, 20);
-                while (yline < 25)
-                {
-                    g.DrawLine(pen, _startPosX, _startPosY + yline, _startPosX - 30, _startPosY - 18);
+            g.FillRectangle(body, _startPosX, _startPosY - 5, 90, 30);
+            g.FillRectangle(general, _startPosX + 10, _startPosY - 20, 60, 15);
+            g.FillRectangle(tube, _startPosX + 30, _startPosY - 40, 15, 20);
+            while (yline < 25)
+            {
+                g.DrawLine(pen, _startPosX, _startPosY + yline, _startPosX - 30, _startPosY - 18);
 
-                    g.DrawLine(pen, _startPosX + 90, _startPosY + yline, _startPosX + 120, _startPosY - 18);
-                    yline++;
-                }
-                
+                g.DrawLine(pen, _startPosX + 90, _startPosY + yline, _startPosX + 120, _startPosY - 18);
+                yline++;
+            }
 
-               
 
-            
+
+
+
         }
     }
 

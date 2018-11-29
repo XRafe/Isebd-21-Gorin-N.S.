@@ -10,22 +10,21 @@ namespace Lab1Var5
 {
     public class WaterCar : Ship
     {
-      
+
 
         public Color DopColor { private set; get; }
 
         public bool Wheel { private set; get; }
-        
+
         public bool Decoreation { private set; get; }
-        
+
 
         public bool Whistle { private set; get; }
 
-
-
+        
         public WaterCar(int maxSpeed, float weight, Color mainColor, Color dopColor, bool
-       wheel, bool decoreation, bool whistle) : 
-            base (maxSpeed, weight, mainColor)
+       wheel, bool decoreation, bool whistle) :
+            base(maxSpeed, weight, mainColor)
         {
             DopColor = dopColor;
             Wheel = wheel;
@@ -41,8 +40,8 @@ namespace Lab1Var5
             int yline = 0;
 
             base.DrawShip(g);
-                Brush reactive = new SolidBrush(Color.Black);
-                Brush Wh = new SolidBrush(DopColor);
+            Brush reactive = new SolidBrush(Color.Black);
+            Brush Wh = new SolidBrush(DopColor);
 
             if (Decoreation)
             {
