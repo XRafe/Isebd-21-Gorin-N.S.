@@ -19,7 +19,7 @@ namespace Lab1Var5
         {
             InitializeComponent();
         }
-       
+
 
         private void Draw()
         {
@@ -69,4 +69,4 @@ namespace Lab1Var5
         }
     }
 }
-    
+

@@ -7,13 +7,7 @@ using System.Threading.Tasks;
 
 namespace Lab1Var5
 {
-    public enum Direction
-    {
-        Up,
-        Down,
-        Left,
-        Right
-    }
+
 
 
 
@@ -24,11 +18,11 @@ namespace Lab1Var5
 
 
         private float _startPosX;
- 
+
 
         private float _startPosY;
 
-        
+
         private int _pictureWidth;
 
 
@@ -144,7 +138,7 @@ namespace Lab1Var5
 
                 g.DrawLine(pen, _startPosX + 200, _startPosY + 30, _startPosX + 250, _startPosY - 30);
 
-               
+
 
             }
         }
