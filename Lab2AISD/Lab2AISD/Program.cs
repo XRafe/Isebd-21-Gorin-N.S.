@@ -10,6 +10,9 @@ namespace Lab2AISD
     {
         static void Main(string[] args)
         {
+            Editorial_distance editorial_distance1 = new Editorial_distance();
+
+            editorial_distance1.distance();
 
             IList<Node> list = new List<Node>();
 
