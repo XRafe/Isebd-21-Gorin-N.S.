@@ -24,8 +24,7 @@ namespace Lab1Var5
 
 
         public int MaxSpeed { protected set; get; }
-
-
+        
         public float Weight { protected set; get; }
 
 
