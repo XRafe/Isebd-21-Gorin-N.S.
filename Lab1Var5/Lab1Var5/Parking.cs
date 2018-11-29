@@ -89,19 +89,14 @@ namespace Lab1Var5
             }
             return null;
         }
-        /// <summary>
-        /// Метод проверки заполнености парковочного места (ячейки массива)
-        /// </summary>
-        /// <param name="index">Номер парковочного места (порядковый номер в  массиве)</param>
- /// <returns></returns>
+        
+
  private bool CheckFreePlace(int index)
         {
             return !_places.ContainsKey(index);
         }
-        /// <summary>
-        /// Метод отрисовки парковки
-        /// </summary>
-        /// <param name="g"></param>
+        
+
         public void Draw(Graphics g)
         {
             DrawMarking(g);
@@ -111,19 +106,19 @@ namespace Lab1Var5
                 _places[keys[i]].DrawShip(g);
             }
         }
-        /// <summary>
-        /// Метод отрисовки разметки парковочных мест
-        /// </summary>
-        /// <param name="g"></param>
+        
+
         private void DrawMarking(Graphics g)
         {
             Pen pen = new Pen(Color.Black, 3);
-            //границы праковки
+            
             g.DrawRectangle(pen, 0, 0, (_maxCount / 5) * _placeSizeWidth, 480);
             for (int i = 0; i < _maxCount / 5; i++)
-            {//отрисовываем, по 5 мест на линии
+            {
+
                 for (int j = 0; j < 6; ++j)
-                {//линия рамзетки места
+                {
+
                     g.DrawLine(pen, i * _placeSizeWidth, j * _placeSizeHeight,
                     i * _placeSizeWidth + 110, j * _placeSizeHeight);
                 }
