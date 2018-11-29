@@ -9,19 +9,17 @@ namespace Lab1Var5
 {
     public abstract class Vehicle : ITransport
     {
-        /// <summary>
-        /// Левая координата отрисовки автомобиля
-        /// </summary>
+
+
         protected float _startPosX;
-        /// <summary>
-        /// Правая кооридната отрисовки автомобиля
-        /// </summary>
+
+
         protected float _startPosY;
-        /// <summary>
-        /// Ширина окна отрисовки
-        /// </summary>
+
+
         protected int _pictureWidth;
-        //Высота окна отрисовки
+
+
         protected int _pictureHeight;
 
 
