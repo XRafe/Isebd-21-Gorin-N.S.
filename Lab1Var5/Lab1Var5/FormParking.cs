@@ -12,9 +12,7 @@ namespace Lab1Var5
 {
     public partial class FormParking : Form
     {
-        /// <summary>
-        /// Объект от класса-парковки
-        /// </summary>
+
         Parking<ITransport> parking;
         public FormParking()
         {
@@ -23,9 +21,7 @@ namespace Lab1Var5
            pictureBox1.Height);
             Draw();
         }
-        /// <summary>
-        /// Метод отрисовки парковки
-        /// </summary>
+
         private void Draw()
         {
             Bitmap bmp = new Bitmap(pictureBox1.Width, pictureBox1.Height);
@@ -65,24 +61,20 @@ namespace Lab1Var5
                 }
             }
         }
-        /// <summary>
-        /// Обработка нажатия кнопки "Забрать"
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+
         private void button1_Click(object sender, EventArgs e)
         {
             if (maskedTextBox1.Text != "")
             {
-                var car = parking - Convert.ToInt32(maskedTextBox1.Text);
-                if (car != null)
+                var Ship = parking - Convert.ToInt32(maskedTextBox1.Text);
+                if (Ship != null)
                 {
                     Bitmap bmp = new Bitmap(pictureBox2.Width,
                    pictureBox2.Height);
                     Graphics gr = Graphics.FromImage(bmp);
-                    car.SetPosition(5, 5, pictureBox2.Width,
+                    Ship.SetPosition(5, 5, pictureBox2.Width,
                    pictureBox2.Height);
-                    car.DrawShip(gr);
+                    Ship.DrawShip(gr);
                     pictureBox2.Image = bmp;
                 }
                 else

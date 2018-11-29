@@ -13,9 +13,8 @@ namespace Lab1Var5
     public partial class FormShip : Form
     {
         private Ship ship;
-        /// <summary>
-        /// Конструктор
-        /// </summary>
+        
+
         public FormShip()
         {
             InitializeComponent();
@@ -29,11 +28,8 @@ namespace Lab1Var5
             ship.DrawShip(gr);
             pictureBoxCars.Image = bmp;
         }
-        /// <summary>
-        /// Обработка нажатия кнопки "Создать"
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+
+
         private void buttonCreate_Click(object sender, EventArgs e)
         {
             Random rnd = new Random();

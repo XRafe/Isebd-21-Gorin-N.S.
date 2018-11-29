@@ -8,15 +8,6 @@ using System.Drawing;
 
 namespace Lab1Var5
 {
-    public enum Direction
-
-    {
-        Up,
-        Down,
-        Left,
-        Right
-    }
-
 
 
 
