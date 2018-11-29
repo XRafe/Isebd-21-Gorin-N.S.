@@ -68,22 +68,23 @@ namespace Lab1Var5
                         WriteToFile("Level" + Environment.NewLine, fs);
                         for (int i = 0; i < countPlaces; i++)
                         {
-                            var ship = level[i];
-                            if (ship != null)
+                            try
                             {
+                                var ship = level[i];
+                                
+                                    if (ship.GetType().Name == "Ship")
+                                    {
+                                        WriteToFile(i + ":Ship:", fs);
+                                    }
+                                    if (ship.GetType().Name == "WaterCar")
+                                    {
+                                        WriteToFile(i + ":WaterCar:", fs);
+                                    }
 
-                                if (ship.GetType().Name == "Ship")
-                                {
-                                    WriteToFile(i + ":Ship:", fs);
-                                }
-                                if (ship.GetType().Name == "WaterCar")
-                                {
-                                    WriteToFile(i + ":WaterCar:", fs);
-                                }
-                        
 
-                                WriteToFile(ship + Environment.NewLine, fs);
+                                    WriteToFile(ship + Environment.NewLine, fs);
                             }
+                            finally { }
                         }
                     }
                 }
@@ -103,7 +104,7 @@ namespace Lab1Var5
         {
             if (!File.Exists(filename))
             {
-                return false;
+                throw new FileNotFoundException();
             }
             string bufferTextFromFile = "";
             using (FileStream fs = new FileStream(filename, FileMode.Open))
@@ -128,14 +129,14 @@ namespace Lab1Var5
                 if (parkingStages != null)
                 {
                     parkingStages.Clear();
-                }
+                }
                 parkingStages = new List<Parking<ITransport>>(count);
             }
             else
             {
-                
-                return false;
-            }
+
+                throw new Exception("Неверный формат файла");
+            }
             int counter = -1;
             ITransport ship = null;
             for (int i = 1; i < strs.Length; ++i)
