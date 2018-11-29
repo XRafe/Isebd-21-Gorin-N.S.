@@ -34,11 +34,8 @@ namespace Lab1Var5
                pictureHeight));
             }
         }
-        /// <summary>
-        /// Индексатор
-        /// </summary>
-        /// <param name="ind"></param>
-        /// <returns></returns>
+        
+
         public Parking<ITransport> this[int ind]
         {
             get
@@ -61,12 +58,13 @@ namespace Lab1Var5
             {
                 using (BufferedStream bs = new BufferedStream(fs))
                 {
-                    //Записываем количество уровней
+        
                     WriteToFile("CountLeveles:" + parkingStages.Count +
                    Environment.NewLine, fs);
                     foreach (var level in parkingStages)
                     {
-                        //Начинаем уровень
+                        
+
                         WriteToFile("Level" + Environment.NewLine, fs);
                         for (int i = 0; i < countPlaces; i++)
                         {
@@ -82,7 +80,8 @@ namespace Lab1Var5
                                 {
                                     WriteToFile(i + ":WaterCar:", fs);
                                 }
-                                //Записываемые параметры
+                        
+
                                 WriteToFile(ship + Environment.NewLine, fs);
                             }
                         }
@@ -98,10 +97,8 @@ namespace Lab1Var5
             stream.Write(info, 0, info.Length);
         }
 
-        /// Загрузка нформации по автомобилям на парковках из файла
-        /// </summary>
-        /// <param name="filename"></param>
-        /// <returns></returns>
+        
+
         public bool LoadData(string filename)
         {
             if (!File.Exists(filename))
@@ -125,7 +122,8 @@ namespace Lab1Var5
             var strs = bufferTextFromFile.Split('\n');
             if (strs[0].Contains("CountLeveles"))
             {
-                //считываем количество уровней
+
+
                 int count = Convert.ToInt32(strs[0].Split(':')[1]);
                 if (parkingStages != null)
                 {
@@ -135,17 +133,19 @@ namespace Lab1Var5
             }
             else
             {
-                //если нет такой записи, то это не те данные
+                
                 return false;
             }
             int counter = -1;
             ITransport ship = null;
             for (int i = 1; i < strs.Length; ++i)
             {
-                //идем по считанным записям
+                
+
                 if (strs[i] == "Level")
                 {
-                    //начинаем новый уровень
+                
+
                     counter++;
                     parkingStages.Add(new Parking<ITransport>(countPlaces, pictureWidth,
                     pictureHeight));

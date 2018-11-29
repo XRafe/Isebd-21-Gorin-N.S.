@@ -10,9 +10,8 @@ namespace Lab1Var5
 {
     public class WaterCar : Ship
     {
-        /// <summary>
-        /// Дополнительный цвет
-        /// </summary>
+
+
         public Color DopColor { private set; get; }
 
         public bool Wheel { private set; get; }
@@ -47,7 +46,8 @@ namespace Lab1Var5
                 Decoreation = Convert.ToBoolean(strs[5]);
                 Whistle = Convert.ToBoolean(strs[6]);
             }
-        }
+        }
+
 
         public override void DrawShip(Graphics g)
         {
@@ -100,7 +100,8 @@ namespace Lab1Var5
         {
             return base.ToString() + ";" + DopColor.Name + ";" + Wheel + ";" +
            Decoreation + ";" + Whistle;
-        }
+        }
+
 
     }
 }
