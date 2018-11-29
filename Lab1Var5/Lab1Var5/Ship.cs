@@ -47,25 +47,23 @@ namespace Lab1Var5
         public Color DopColor { private set; get; }
 
 
-        public bool FrontSpoiler { private set; get; }
+        public bool General { private set; get; }
 
 
-        public bool SideSpoiler { private set; get; }
+        public bool Tube { private set; get; }
 
 
-        public bool BackSpoiler { private set; get; }
 
 
         public Ship(int maxSpeed, float weight, Color mainColor, Color dopColor, bool
-       frontSpoiler, bool sideSpoiler, bool backSpoiler)
+       general, bool tube)
         {
             MaxSpeed = maxSpeed;
             Weight = weight;
             MainColor = mainColor;
             DopColor = dopColor;
-            FrontSpoiler = frontSpoiler;
-            SideSpoiler = sideSpoiler;
-            BackSpoiler = backSpoiler;
+            General = general;
+            Tube = tube;
         }
 
 
@@ -113,34 +111,41 @@ namespace Lab1Var5
             }
         }
 
-        public void DrawCar(Graphics g)
+        public void DrawShip(Graphics g)
         {
             int yline = -5;
 
-            Brush general = new SolidBrush(Color.Blue);
+            Brush general = new SolidBrush(MainColor);
             Brush body = new SolidBrush(Color.Green);
-            Brush tube = new SolidBrush(Color.Red);
+            Brush tube = new SolidBrush(DopColor);
             Pen pen = new Pen(Color.Green);
 
-            if (FrontSpoiler)
+
+            g.FillRectangle(body, _startPosX + 80, _startPosY - 6, 120, 40);
+            if (General)
             {
-                g.FillRectangle(body, _startPosX + 80, _startPosY - 6, 120, 40);
                 g.FillRectangle(general, _startPosX + 90, _startPosY - 26, 90, 20);
-                g.FillRectangle(tube, _startPosX + 110, _startPosY - 56, 30, 30);
-                g.DrawLine(pen, _startPosX + 80, _startPosY + 30, _startPosX + 30, _startPosY - 30);
-                while (yline < 35)
-                {
-                    g.DrawLine(pen, _startPosX + 80, _startPosY + yline, _startPosX + 30, _startPosY - 30);
-
-                    g.DrawLine(pen, _startPosX + 200, _startPosY + yline, _startPosX + 250, _startPosY - 30);
-                    yline++;
-                }
-
-                g.DrawLine(pen, _startPosX + 200, _startPosY + 30, _startPosX + 250, _startPosY - 30);
-
-
-
             }
+
+            if (Tube)
+            {
+                g.FillRectangle(tube, _startPosX + 110, _startPosY - 56, 30, 30);
+            }
+
+            g.DrawLine(pen, _startPosX + 80, _startPosY + 30, _startPosX + 30, _startPosY - 30);
+            while (yline < 35)
+            {
+                g.DrawLine(pen, _startPosX + 80, _startPosY + yline, _startPosX + 30, _startPosY - 30);
+
+                g.DrawLine(pen, _startPosX + 200, _startPosY + yline, _startPosX + 250, _startPosY - 30);
+                yline++;
+            }
+
+            g.DrawLine(pen, _startPosX + 200, _startPosY + 30, _startPosX + 250, _startPosY - 30);
+
+
+
+
         }
     }
 

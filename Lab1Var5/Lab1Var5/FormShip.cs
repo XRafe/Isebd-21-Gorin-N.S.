@@ -23,10 +23,10 @@ namespace Lab1Var5
 
         private void Draw()
         {
-            Bitmap bmp = new Bitmap(pictureBoxCars.Width, pictureBoxCars.Height);
+            Bitmap bmp = new Bitmap(pictureBoxShips.Width, pictureBoxShips.Height);
             Graphics gr = Graphics.FromImage(bmp);
-            ship.DrawCar(gr);
-            pictureBoxCars.Image = bmp;
+            ship.DrawShip(gr);
+            pictureBoxShips.Image = bmp;
         }
 
 
@@ -34,9 +34,9 @@ namespace Lab1Var5
         {
             Random rnd = new Random();
             ship = new Ship(rnd.Next(100, 300), rnd.Next(1000, 2000), Color.Blue,
-           Color.Yellow, true, true, true);
-            ship.SetPosition(rnd.Next(10, 100), rnd.Next(10, 100), pictureBoxCars.Width,
-           pictureBoxCars.Height);
+           Color.Yellow, true, true);
+            ship.SetPosition(rnd.Next(10, 100), rnd.Next(10, 100), pictureBoxShips.Width,
+           pictureBoxShips.Height);
             Draw();
         }
 
@@ -63,10 +63,6 @@ namespace Lab1Var5
             Draw();
         }
 
-        private void Button_Down_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
 
