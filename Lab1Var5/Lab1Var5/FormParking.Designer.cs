@@ -51,13 +51,13 @@
             // 
             this.pictureBoxParking.Location = new System.Drawing.Point(-2, 27);
             this.pictureBoxParking.Name = "pictureBoxParking";
-            this.pictureBoxParking.Size = new System.Drawing.Size(529, 437);
+            this.pictureBoxParking.Size = new System.Drawing.Size(558, 437);
             this.pictureBoxParking.TabIndex = 0;
             this.pictureBoxParking.TabStop = false;
             // 
             // pictureBoxTakeShip
             // 
-            this.pictureBoxTakeShip.Location = new System.Drawing.Point(533, 325);
+            this.pictureBoxTakeShip.Location = new System.Drawing.Point(565, 325);
             this.pictureBoxTakeShip.Name = "pictureBoxTakeShip";
             this.pictureBoxTakeShip.Size = new System.Drawing.Size(186, 131);
             this.pictureBoxTakeShip.TabIndex = 1;
@@ -65,14 +65,14 @@
             // 
             // maskedTextBox
             // 
-            this.maskedTextBox.Location = new System.Drawing.Point(536, 297);
+            this.maskedTextBox.Location = new System.Drawing.Point(565, 299);
             this.maskedTextBox.Name = "maskedTextBox";
             this.maskedTextBox.Size = new System.Drawing.Size(42, 20);
             this.maskedTextBox.TabIndex = 2;
             // 
             // buttonTakeShip
             // 
-            this.buttonTakeShip.Location = new System.Drawing.Point(584, 296);
+            this.buttonTakeShip.Location = new System.Drawing.Point(672, 297);
             this.buttonTakeShip.Name = "buttonTakeShip";
             this.buttonTakeShip.Size = new System.Drawing.Size(79, 23);
             this.buttonTakeShip.TabIndex = 3;
@@ -83,7 +83,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(533, 280);
+            this.label1.Location = new System.Drawing.Point(562, 270);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(42, 13);
             this.label1.TabIndex = 4;
@@ -92,7 +92,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(533, 257);
+            this.label2.Location = new System.Drawing.Point(562, 248);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(94, 13);
             this.label2.TabIndex = 5;
@@ -101,7 +101,7 @@
             // listBoxLevels
             // 
             this.listBoxLevels.FormattingEnabled = true;
-            this.listBoxLevels.Location = new System.Drawing.Point(533, 25);
+            this.listBoxLevels.Location = new System.Drawing.Point(575, 25);
             this.listBoxLevels.Name = "listBoxLevels";
             this.listBoxLevels.Size = new System.Drawing.Size(176, 82);
             this.listBoxLevels.TabIndex = 8;
@@ -109,7 +109,7 @@
             // 
             // buttonSetShip
             // 
-            this.buttonSetShip.Location = new System.Drawing.Point(536, 113);
+            this.buttonSetShip.Location = new System.Drawing.Point(578, 113);
             this.buttonSetShip.Name = "buttonSetShip";
             this.buttonSetShip.Size = new System.Drawing.Size(173, 55);
             this.buttonSetShip.TabIndex = 9;
@@ -124,7 +124,7 @@
             this.файлToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(721, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(763, 24);
             this.menuStrip1.TabIndex = 10;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -164,7 +164,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(721, 468);
+            this.ClientSize = new System.Drawing.Size(763, 468);
             this.Controls.Add(this.buttonSetShip);
             this.Controls.Add(this.listBoxLevels);
             this.Controls.Add(this.label2);

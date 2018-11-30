@@ -22,7 +22,8 @@ namespace Lab1Var5
 
         private const int countLevel = 5;
 
-        private Logger logger;
+        private Logger logger;
+
         public FormParking()
         {
             InitializeComponent();
@@ -84,7 +85,7 @@ namespace Lab1Var5
                            pictureBoxTakeShip.Height);
                             pictureBoxTakeShip.Image = bmp;
 
-                            logger.Info("Изъят автомобиль " + ship.ToString() + " с места " + maskedTextBox.Text);
+                            logger.Info("Изъят корабль " + ship.ToString() + " с места " + maskedTextBox.Text);
                         }
                         Draw();
                     }

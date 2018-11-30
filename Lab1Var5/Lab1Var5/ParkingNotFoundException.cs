@@ -8,8 +8,9 @@ namespace Lab1Var5
 {
     public class ParkingNotFoundException : Exception
     {
-        public ParkingNotFoundException(int i) : base("Не найден автомобиль по месту " +
+        public ParkingNotFoundException(int i) : base("Не найден корабль по месту " +
        i)
         { }
-    }
+    }
+
 }

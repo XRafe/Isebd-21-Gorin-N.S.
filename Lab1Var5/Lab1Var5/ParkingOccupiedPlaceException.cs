@@ -10,5 +10,6 @@ namespace Lab1Var5
     {
         public ParkingOccupiedPlaceException(int i) : base("На месте " + i + " уже стоит корабль")
         { }
-    }
+    }
+
 }

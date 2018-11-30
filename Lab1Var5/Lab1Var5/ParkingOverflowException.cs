@@ -8,7 +8,8 @@ namespace Lab1Var5
 {
     public class ParkingOverflowException : Exception
     {
-        public ParkingOverflowException() : base("На парковке нет свободных мест")
+        public ParkingOverflowException() : base("На пристани нет свободных мест")
         { }
-    }
+    }
+
 }

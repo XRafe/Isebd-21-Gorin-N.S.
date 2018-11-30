@@ -38,7 +38,8 @@ namespace Lab1Var5
         {
             if (p._places.Count == p._maxCount)
             {
-                throw new ParkingOverflowException();
+                throw new ParkingOverflowException();
+
             }
             for (int i = 0; i < p._maxCount; i++)
             {
@@ -124,7 +125,8 @@ namespace Lab1Var5
                 else
                 {
                     throw new ParkingOccupiedPlaceException(ind);
-                }
+                }
+
             }
         }
 
