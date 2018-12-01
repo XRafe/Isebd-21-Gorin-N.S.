@@ -14,6 +14,4 @@ namespace Lab1Var5
         Left,
         Right
     }
-
-
 }
