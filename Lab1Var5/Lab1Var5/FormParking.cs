@@ -17,21 +17,21 @@ namespace Lab1Var5
         public FormParking()
         {
             InitializeComponent();
-            parking = new Parking<ITransport>(20, pictureBox1.Width,
-           pictureBox1.Height);
+            parking = new Parking<ITransport>(20, pictureBoxGeneral.Width,
+           pictureBoxGeneral.Height);
             Draw();
         }
 
         private void Draw()
         {
-            Bitmap bmp = new Bitmap(pictureBox1.Width, pictureBox1.Height);
+            Bitmap bmp = new Bitmap(pictureBoxGeneral.Width, pictureBoxGeneral.Height);
             Graphics gr = Graphics.FromImage(bmp);
             parking.Draw(gr);
-            pictureBox1.Image = bmp;
+            pictureBoxGeneral.Image = bmp;
         }
   
 
-        private void button2_Click(object sender, EventArgs e)
+        private void buttonToPut_Click(object sender, EventArgs e)
         {
             ColorDialog dialog = new ColorDialog();
             if (dialog.ShowDialog() == DialogResult.OK)
@@ -43,11 +43,9 @@ namespace Lab1Var5
         }
 
 
-        private void button3_Click_1(object sender, EventArgs e)
+        private void buttonToPutTun_Click(object sender, EventArgs e)
         {
-
-
-
+            
             ColorDialog dialog = new ColorDialog();
             if (dialog.ShowDialog() == DialogResult.OK)
             {
@@ -62,26 +60,26 @@ namespace Lab1Var5
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void buttonPickUp_Click(object sender, EventArgs e)
         {
-            if (maskedTextBox1.Text != "")
+            if (maskedTextBoxPlace.Text != "")
             {
-                var Ship = parking - Convert.ToInt32(maskedTextBox1.Text);
+                var Ship = parking - Convert.ToInt32(maskedTextBoxPlace.Text);
                 if (Ship != null)
                 {
-                    Bitmap bmp = new Bitmap(pictureBox2.Width,
-                   pictureBox2.Height);
+                    Bitmap bmp = new Bitmap(pictureBoxDop.Width,
+                   pictureBoxDop.Height);
                     Graphics gr = Graphics.FromImage(bmp);
-                    Ship.SetPosition(5, 5, pictureBox2.Width,
-                   pictureBox2.Height);
+                    Ship.SetPosition(5, 5, pictureBoxDop.Width,
+                   pictureBoxDop.Height);
                     Ship.DrawShip(gr);
-                    pictureBox2.Image = bmp;
+                    pictureBoxDop.Image = bmp;
                 }
                 else
                 {
-                    Bitmap bmp = new Bitmap(pictureBox2.Width,
-                   pictureBox2.Height);
-                    pictureBox2.Image = bmp;
+                    Bitmap bmp = new Bitmap(pictureBoxDop.Width,
+                   pictureBoxDop.Height);
+                    pictureBoxDop.Image = bmp;
                 }
                 Draw();
             }

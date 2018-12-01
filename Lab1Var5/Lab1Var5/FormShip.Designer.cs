@@ -113,7 +113,7 @@
             this.CrTun.TabIndex = 6;
             this.CrTun.Text = "Create Tuning";
             this.CrTun.UseVisualStyleBackColor = true;
-            this.CrTun.Click += new System.EventHandler(this.button1_Click);
+            this.CrTun.Click += new System.EventHandler(this.buttonCrTun_Click);
             // 
             // FormShip
             // 

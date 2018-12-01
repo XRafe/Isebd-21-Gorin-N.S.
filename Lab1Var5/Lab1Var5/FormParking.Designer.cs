@@ -28,106 +28,106 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.pictureBoxGeneral = new System.Windows.Forms.PictureBox();
+            this.pictureBoxDop = new System.Windows.Forms.PictureBox();
+            this.maskedTextBoxPlace = new System.Windows.Forms.MaskedTextBox();
+            this.buttonPickUp = new System.Windows.Forms.Button();
+            this.labelPlace = new System.Windows.Forms.Label();
+            this.labelPickUp = new System.Windows.Forms.Label();
+            this.buttonToPut = new System.Windows.Forms.Button();
+            this.buttonToPutTun = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxGeneral)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDop)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // pictureBoxGeneral
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(-2, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(529, 464);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.pictureBoxGeneral.Location = new System.Drawing.Point(-2, 0);
+            this.pictureBoxGeneral.Name = "pictureBoxGeneral";
+            this.pictureBoxGeneral.Size = new System.Drawing.Size(529, 464);
+            this.pictureBoxGeneral.TabIndex = 0;
+            this.pictureBoxGeneral.TabStop = false;
             // 
-            // pictureBox2
+            // pictureBoxDop
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(533, 255);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(176, 131);
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
+            this.pictureBoxDop.Location = new System.Drawing.Point(533, 255);
+            this.pictureBoxDop.Name = "pictureBoxDop";
+            this.pictureBoxDop.Size = new System.Drawing.Size(176, 131);
+            this.pictureBoxDop.TabIndex = 1;
+            this.pictureBoxDop.TabStop = false;
             // 
-            // maskedTextBox1
+            // maskedTextBoxPlace
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(624, 200);
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(34, 20);
-            this.maskedTextBox1.TabIndex = 2;
+            this.maskedTextBoxPlace.Location = new System.Drawing.Point(624, 200);
+            this.maskedTextBoxPlace.Name = "maskedTextBoxPlace";
+            this.maskedTextBoxPlace.Size = new System.Drawing.Size(34, 20);
+            this.maskedTextBoxPlace.TabIndex = 2;
             // 
-            // button1
+            // buttonPickUp
             // 
-            this.button1.Location = new System.Drawing.Point(567, 226);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(79, 23);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Забрать";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.buttonPickUp.Location = new System.Drawing.Point(567, 226);
+            this.buttonPickUp.Name = "buttonPickUp";
+            this.buttonPickUp.Size = new System.Drawing.Size(79, 23);
+            this.buttonPickUp.TabIndex = 3;
+            this.buttonPickUp.Text = "Забрать";
+            this.buttonPickUp.UseVisualStyleBackColor = true;
+            this.buttonPickUp.Click += new System.EventHandler(this.buttonPickUp_Click);
             // 
-            // label1
+            // labelPlace
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(564, 203);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(42, 13);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Место:";
+            this.labelPlace.AutoSize = true;
+            this.labelPlace.Location = new System.Drawing.Point(564, 203);
+            this.labelPlace.Name = "labelPlace";
+            this.labelPlace.Size = new System.Drawing.Size(42, 13);
+            this.labelPlace.TabIndex = 4;
+            this.labelPlace.Text = "Место:";
             // 
-            // label2
+            // labelPickUp
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(564, 173);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(94, 13);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Забрать корабль";
+            this.labelPickUp.AutoSize = true;
+            this.labelPickUp.Location = new System.Drawing.Point(564, 173);
+            this.labelPickUp.Name = "labelPickUp";
+            this.labelPickUp.Size = new System.Drawing.Size(94, 13);
+            this.labelPickUp.TabIndex = 5;
+            this.labelPickUp.Text = "Забрать корабль";
             // 
-            // button2
+            // buttonToPut
             // 
-            this.button2.Location = new System.Drawing.Point(567, 11);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(100, 39);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "Припарковать корабль";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.buttonToPut.Location = new System.Drawing.Point(567, 11);
+            this.buttonToPut.Name = "buttonToPut";
+            this.buttonToPut.Size = new System.Drawing.Size(100, 39);
+            this.buttonToPut.TabIndex = 6;
+            this.buttonToPut.Text = "Припарковать корабль";
+            this.buttonToPut.UseVisualStyleBackColor = true;
+            this.buttonToPut.Click += new System.EventHandler(this.buttonToPut_Click);
             // 
-            // button3
+            // buttonToPutTun
             // 
-            this.button3.Location = new System.Drawing.Point(567, 56);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(100, 40);
-            this.button3.TabIndex = 7;
-            this.button3.Text = "Припарковать тюнинг корабль";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click_1);
+            this.buttonToPutTun.Location = new System.Drawing.Point(567, 56);
+            this.buttonToPutTun.Name = "buttonToPutTun";
+            this.buttonToPutTun.Size = new System.Drawing.Size(100, 40);
+            this.buttonToPutTun.TabIndex = 7;
+            this.buttonToPutTun.Text = "Припарковать тюнинг корабль";
+            this.buttonToPutTun.UseVisualStyleBackColor = true;
+            this.buttonToPutTun.Click += new System.EventHandler(this.buttonToPutTun_Click);
             // 
             // FormParking
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(721, 468);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.maskedTextBox1);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.buttonToPutTun);
+            this.Controls.Add(this.buttonToPut);
+            this.Controls.Add(this.labelPickUp);
+            this.Controls.Add(this.labelPlace);
+            this.Controls.Add(this.buttonPickUp);
+            this.Controls.Add(this.maskedTextBoxPlace);
+            this.Controls.Add(this.pictureBoxDop);
+            this.Controls.Add(this.pictureBoxGeneral);
             this.Name = "FormParking";
             this.Text = "Пристань";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxGeneral)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDop)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -135,13 +135,13 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.PictureBox pictureBoxGeneral;
+        private System.Windows.Forms.PictureBox pictureBoxDop;
+        private System.Windows.Forms.MaskedTextBox maskedTextBoxPlace;
+        private System.Windows.Forms.Button buttonPickUp;
+        private System.Windows.Forms.Label labelPlace;
+        private System.Windows.Forms.Label labelPickUp;
+        private System.Windows.Forms.Button buttonToPut;
+        private System.Windows.Forms.Button buttonToPutTun;
     }
 }

@@ -14,10 +14,7 @@ namespace Lab1Var5
 
     public class Ship : Vehicle
     {
-
-    
-
-
+        
 
         protected const int carWidth = 240;
 
