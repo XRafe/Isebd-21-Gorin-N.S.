@@ -7,49 +7,32 @@ using System.Threading.Tasks;
 
 namespace Lab1Var5
 {
-
     public class Ship
     {
-
-
         private float _startPosX;
-
-
+        
         private float _startPosY;
-
-
+        
         private int _pictureWidth;
-
-
+        
         private int _pictureHeight;
-
-
+        
         private const int shipWidth = 240;
-
-
+        
         private const int shipHeight = 60;
-
-
+        
         public int MaxSpeed { private set; get; }
-
-
+        
         public float Weight { private set; get; }
-
-
+        
         public Color MainColor { private set; get; }
-
-
+        
         public Color DopColor { private set; get; }
-
-
+        
         public bool General { private set; get; }
-
-
+        
         public bool Tube { private set; get; }
-
-
-
-
+        
         public Ship(int maxSpeed, float weight, Color mainColor, Color dopColor, bool
        general, bool tube)
         {
@@ -60,8 +43,7 @@ namespace Lab1Var5
             General = general;
             Tube = tube;
         }
-
-
+        
         public void SetPosition(int x, int y, int width, int height)
         {
             _startPosX = x;
@@ -75,28 +57,27 @@ namespace Lab1Var5
             float step = MaxSpeed * 100 / Weight;
             switch (direction)
             {
-                // вправо
                 case Direction.Right:
                     if (_startPosX + step < _pictureWidth - shipWidth)
                     {
                         _startPosX += step;
                     }
                     break;
-                //влево
+
                 case Direction.Left:
                     if (_startPosX - step > 0)
                     {
                         _startPosX -= step;
                     }
                     break;
-                //вверх
+
                 case Direction.Up:
                     if (_startPosY - step > 0)
                     {
                         _startPosY -= step;
                     }
                     break;
-                //вниз
+
                 case Direction.Down:
                     if (_startPosY + step < _pictureHeight - shipHeight)
                     {
@@ -114,8 +95,7 @@ namespace Lab1Var5
             Brush body = new SolidBrush(Color.Green);
             Brush tube = new SolidBrush(DopColor);
             Pen pen = new Pen(Color.Green);
-
-
+            
             g.FillRectangle(body, _startPosX + 80, _startPosY - 6, 120, 40);
             if (General)
             {
@@ -137,12 +117,6 @@ namespace Lab1Var5
             }
 
             g.DrawLine(pen, _startPosX + 200, _startPosY + 30, _startPosX + 250, _startPosY - 30);
-
-
-
-
         }
     }
-
 }
-
