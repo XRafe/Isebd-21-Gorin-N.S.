@@ -3,6 +3,7 @@
     partial class FormShip
     {
 
+
         private System.ComponentModel.IContainer components = null;
 
 
