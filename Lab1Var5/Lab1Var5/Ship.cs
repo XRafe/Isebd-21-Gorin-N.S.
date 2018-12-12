@@ -11,12 +11,10 @@ namespace Lab1Var5
 
     public class Ship : Vehicle
     {
-        
         protected const int ShipWidth = 240;
 
         protected const int ShipHeight = 60;
-
-
+        
         public Ship(int maxSpeed, float weight, Color mainColor)
         {
             MaxSpeed = maxSpeed;
@@ -29,28 +27,27 @@ namespace Lab1Var5
             float step = MaxSpeed * 100 / Weight;
             switch (direction)
             {
-                // вправо
                 case Direction.Right:
                     if (_startPosX + step < _pictureWidth - ShipWidth)
                     {
                         _startPosX += step;
                     }
                     break;
-                //влево
+
                 case Direction.Left:
                     if (_startPosX - step > 0)
                     {
                         _startPosX -= step;
                     }
                     break;
-                //вверх
+
                 case Direction.Up:
                     if (_startPosY - step > 0)
                     {
                         _startPosY -= step;
                     }
                     break;
-                //вниз
+
                 case Direction.Down:
                     if (_startPosY + step < _pictureHeight - ShipHeight)
                     {
@@ -68,8 +65,7 @@ namespace Lab1Var5
             Brush body = new SolidBrush(Color.Green);
             Brush tube = new SolidBrush(Color.Red);
             Pen pen = new Pen(Color.Green);
-
-
+            
             g.FillRectangle(body, _startPosX, _startPosY - 5, 90, 30);
             g.FillRectangle(general, _startPosX + 10, _startPosY - 20, 60, 15);
             g.FillRectangle(tube, _startPosX + 30, _startPosY - 40, 15, 20);
@@ -80,13 +76,6 @@ namespace Lab1Var5
                 g.DrawLine(pen, _startPosX + 90, _startPosY + yline, _startPosX + 120, _startPosY - 18);
                 yline++;
             }
-
-
-
-
-
         }
     }
-
 }
-
