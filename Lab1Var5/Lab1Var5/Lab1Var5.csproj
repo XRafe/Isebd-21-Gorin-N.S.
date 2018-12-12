@@ -63,6 +63,7 @@
   <ItemGroup>
     <Compile Include="Direction.cs" />
     <Compile Include="ITransport.cs" />
+
     <Compile Include="Ship.cs" />
     <Compile Include="FormShip.cs">
       <SubType>Form</SubType>

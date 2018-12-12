@@ -23,6 +23,7 @@
             this.buttonRight = new System.Windows.Forms.Button();
             this.buttonUp = new System.Windows.Forms.Button();
             this.pictureBoxShips = new System.Windows.Forms.PictureBox();
+
             this.CrTun = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxShips)).BeginInit();
             this.SuspendLayout();
@@ -34,6 +35,7 @@
             this.CrSt.Text = "Create Standart";
             this.CrSt.UseVisualStyleBackColor = true;
             this.CrSt.Click += new System.EventHandler(this.buttonCreate_Click);
+
 
             this.buttonLeft.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonLeft.BackgroundImage = global::Lab1Var5.Properties.Resources.left1;
@@ -82,6 +84,7 @@
             this.pictureBoxShips.TabIndex = 0;
             this.pictureBoxShips.TabStop = false;
 
+
             this.CrTun.Location = new System.Drawing.Point(511, 8);
             this.CrTun.Name = "CrTun";
             this.CrTun.Size = new System.Drawing.Size(97, 23);
@@ -89,6 +92,7 @@
             this.CrTun.Text = "Create Tuning";
             this.CrTun.UseVisualStyleBackColor = true;
             this.CrTun.Click += new System.EventHandler(this.buttonCreateTun_Click);
+
 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -98,7 +102,9 @@
             this.Controls.Add(this.buttonDown);
             this.Controls.Add(this.buttonLeft);
             this.Controls.Add(this.buttonUp);
+
             this.Controls.Add(this.CrSt);
+
             this.Controls.Add(this.pictureBoxShips);
             this.Name = "FormShip";
             this.Text = "Form1";
@@ -110,7 +116,9 @@
 
         private System.Windows.Forms.PictureBox pictureBoxShips;
 
+
         private System.Windows.Forms.Button CrSt;
+
 
         private System.Windows.Forms.Button buttonUp;
 
@@ -123,4 +131,3 @@
         private System.Windows.Forms.Button CrTun;
     }
 }
-

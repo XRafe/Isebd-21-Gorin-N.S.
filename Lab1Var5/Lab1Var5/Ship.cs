@@ -16,6 +16,7 @@ namespace Lab1Var5
         protected const int ShipHeight = 60;
 
         public Ship(int maxSpeed, float weight, Color mainColor)
+
         {
             MaxSpeed = maxSpeed;
             Weight = weight;
@@ -23,12 +24,15 @@ namespace Lab1Var5
         }
 
         public override void MoveTransport(Direction direction)
+
         {
             float step = MaxSpeed * 100 / Weight;
+
             switch (direction)
             {
                 case Direction.Right:
                     if (_startPosX + step < _pictureWidth - ShipWidth)
+
                     {
                         _startPosX += step;
                     }
@@ -50,6 +54,7 @@ namespace Lab1Var5
 
                 case Direction.Down:
                     if (_startPosY + step < _pictureHeight - ShipHeight)
+
                     {
                         _startPosY += step;
                     }
@@ -79,8 +84,11 @@ namespace Lab1Var5
             {
                 g.DrawLine(pen, _startPosX, _startPosY + yline, _startPosX - 30, _startPosY - 18);
                 g.DrawLine(pen, _startPosX + 90, _startPosY + yline, _startPosX + 120, _startPosY - 18);
+
                 yline++;
             }
+
+            g.DrawLine(pen, _startPosX + 200, _startPosY + 30, _startPosX + 250, _startPosY - 30);
         }
     }
 }

@@ -30,7 +30,9 @@ namespace Lab1Var5
         private void buttonCreate_Click(object sender, EventArgs e)
         {
             Random rnd = new Random();
+
             ship = new Ship(rnd.Next(100, 300), rnd.Next(1000, 2000), Color.Blue);
+
             ship.SetPosition(rnd.Next(10, 100), rnd.Next(10, 100), pictureBoxShips.Width,
            pictureBoxShips.Height);
             Draw();
@@ -57,6 +59,7 @@ namespace Lab1Var5
             Draw();
         }
 
+
         private void buttonCreateTun_Click(object sender, EventArgs e)
         {
             Random rnd = new Random();
@@ -66,5 +69,6 @@ namespace Lab1Var5
            pictureBoxShips.Height);
             Draw();
         }
+
     }
 }
