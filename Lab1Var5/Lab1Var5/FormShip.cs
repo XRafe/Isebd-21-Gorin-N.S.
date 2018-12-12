@@ -13,15 +13,12 @@ namespace Lab1Var5
     public partial class FormShip : Form
     {
         private Ship ship;
-        /// <summary>
-        /// Конструктор
-        /// </summary>
+
         public FormShip()
         {
             InitializeComponent();
         }
   
-
         private void Draw()
         {
             Bitmap bmp = new Bitmap(pictureBoxShips.Width, pictureBoxShips.Height);
@@ -29,8 +26,7 @@ namespace Lab1Var5
             ship.DrawShip(gr);
             pictureBoxShips.Image = bmp;
         }
-
-
+        
         private void buttonCreate_Click(object sender, EventArgs e)
         {
             Random rnd = new Random();
@@ -39,14 +35,9 @@ namespace Lab1Var5
            pictureBoxShips.Height);
             Draw();
         }
-        /// <summary>
-        /// Обработка нажатия кнопок управления
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+
         private void buttonMove_Click(object sender, EventArgs e)
         {
-            //получаем имя кнопки
             string name = (sender as Button).Name;
             switch (name)
             {
@@ -65,8 +56,7 @@ namespace Lab1Var5
             }
             Draw();
         }
-
-
+        
         private void buttonCrTun_Click(object sender, EventArgs e)
         {
             Random rnd = new Random();
@@ -78,4 +68,3 @@ namespace Lab1Var5
         }
     }
 }
-    
