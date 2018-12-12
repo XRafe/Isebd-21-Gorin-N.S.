@@ -10,29 +10,29 @@ namespace Lab1Var5
     public class Ship
     {
         private float _startPosX;
-        
+
         private float _startPosY;
-        
+
         private int _pictureWidth;
-        
+
         private int _pictureHeight;
-        
+
         private const int shipWidth = 240;
-        
+
         private const int shipHeight = 60;
-        
+
         public int MaxSpeed { private set; get; }
-        
+
         public float Weight { private set; get; }
-        
+
         public Color MainColor { private set; get; }
-        
+
         public Color DopColor { private set; get; }
-        
+
         public bool General { private set; get; }
-        
+
         public bool Tube { private set; get; }
-        
+
         public Ship(int maxSpeed, float weight, Color mainColor, Color dopColor, bool
        general, bool tube)
         {
@@ -43,7 +43,7 @@ namespace Lab1Var5
             General = general;
             Tube = tube;
         }
-        
+
         public void SetPosition(int x, int y, int width, int height)
         {
             _startPosX = x;
@@ -55,6 +55,7 @@ namespace Lab1Var5
         public void MoveTransport(Direction direction)
         {
             float step = MaxSpeed * 100 / Weight;
+
             switch (direction)
             {
                 case Direction.Right:
@@ -92,11 +93,15 @@ namespace Lab1Var5
             int yline = -5;
 
             Brush general = new SolidBrush(MainColor);
+
             Brush body = new SolidBrush(Color.Green);
+
             Brush tube = new SolidBrush(DopColor);
+
             Pen pen = new Pen(Color.Green);
-            
+
             g.FillRectangle(body, _startPosX + 80, _startPosY - 6, 120, 40);
+
             if (General)
             {
                 g.FillRectangle(general, _startPosX + 90, _startPosY - 26, 90, 20);
@@ -108,6 +113,7 @@ namespace Lab1Var5
             }
 
             g.DrawLine(pen, _startPosX + 80, _startPosY + 30, _startPosX + 30, _startPosY - 30);
+
             while (yline < 35)
             {
                 g.DrawLine(pen, _startPosX + 80, _startPosY + yline, _startPosX + 30, _startPosY - 30);

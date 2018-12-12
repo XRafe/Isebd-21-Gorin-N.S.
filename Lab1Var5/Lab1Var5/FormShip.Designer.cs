@@ -2,10 +2,7 @@
 {
     partial class FormShip
     {
-
-
         private System.ComponentModel.IContainer components = null;
-
 
         protected override void Dispose(bool disposing)
         {
@@ -18,10 +15,6 @@
 
         #region Код, автоматически созданный конструктором форм Windows
 
-        /// <summary>
-        /// Требуемый метод для поддержки конструктора — не изменяйте 
-        /// содержимое этого метода с помощью редактора кода.
-        /// </summary>
         private void InitializeComponent()
         {
             this.buttonCreate = new System.Windows.Forms.Button();
@@ -32,9 +25,7 @@
             this.pictureBoxShips = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxShips)).BeginInit();
             this.SuspendLayout();
-            // 
-            // buttonCreate
-            // 
+
             this.buttonCreate.Location = new System.Drawing.Point(8, 8);
             this.buttonCreate.Name = "buttonCreate";
             this.buttonCreate.Size = new System.Drawing.Size(81, 23);
@@ -42,9 +33,7 @@
             this.buttonCreate.Text = "Создать";
             this.buttonCreate.UseVisualStyleBackColor = true;
             this.buttonCreate.Click += new System.EventHandler(this.buttonCreate_Click);
-            // 
-            // buttonLeft
-            // 
+
             this.buttonLeft.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonLeft.BackgroundImage = global::Lab1Var5.Properties.Resources.left1;
             this.buttonLeft.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
@@ -54,9 +43,7 @@
             this.buttonLeft.TabIndex = 3;
             this.buttonLeft.UseVisualStyleBackColor = true;
             this.buttonLeft.Click += new System.EventHandler(this.buttonMove_Click);
-            // 
-            // buttonDown
-            // 
+
             this.buttonDown.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonDown.BackgroundImage = global::Lab1Var5.Properties.Resources.down1;
             this.buttonDown.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
@@ -66,9 +53,7 @@
             this.buttonDown.TabIndex = 4;
             this.buttonDown.UseVisualStyleBackColor = true;
             this.buttonDown.Click += new System.EventHandler(this.buttonMove_Click);
-            // 
-            // buttonRight
-            // 
+
             this.buttonRight.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonRight.BackgroundImage = global::Lab1Var5.Properties.Resources.right1;
             this.buttonRight.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
@@ -78,9 +63,7 @@
             this.buttonRight.TabIndex = 5;
             this.buttonRight.UseVisualStyleBackColor = true;
             this.buttonRight.Click += new System.EventHandler(this.buttonMove_Click);
-            // 
-            // buttonUp
-            // 
+
             this.buttonUp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonUp.BackgroundImage = global::Lab1Var5.Properties.Resources.up1;
             this.buttonUp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
@@ -91,14 +74,12 @@
             this.buttonUp.UseVisualStyleBackColor = true;
             this.buttonUp.Click += new System.EventHandler(this.buttonMove_Click);
 
-
             this.pictureBoxShips.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBoxShips.Location = new System.Drawing.Point(0, 0);
             this.pictureBoxShips.Name = "pictureBoxShips";
             this.pictureBoxShips.Size = new System.Drawing.Size(620, 333);
             this.pictureBoxShips.TabIndex = 0;
             this.pictureBoxShips.TabStop = false;
-
 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -113,17 +94,20 @@
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxShips)).EndInit();
             this.ResumeLayout(false);
-
         }
 
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBoxShips;
+
         private System.Windows.Forms.Button buttonCreate;
+
         private System.Windows.Forms.Button buttonUp;
+
         private System.Windows.Forms.Button buttonLeft;
+
         private System.Windows.Forms.Button buttonDown;
+
         private System.Windows.Forms.Button buttonRight;
     }
 }
-
