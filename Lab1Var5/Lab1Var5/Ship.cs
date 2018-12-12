@@ -14,7 +14,7 @@ namespace Lab1Var5
         protected const int ShipWidth = 240;
 
         protected const int ShipHeight = 60;
-        
+
         public Ship(int maxSpeed, float weight, Color mainColor)
         {
             MaxSpeed = maxSpeed;
@@ -62,17 +62,22 @@ namespace Lab1Var5
             int yline = -5;
 
             Brush general = new SolidBrush(Color.Blue);
+
             Brush body = new SolidBrush(Color.Green);
+
             Brush tube = new SolidBrush(Color.Red);
+
             Pen pen = new Pen(Color.Green);
-            
+
             g.FillRectangle(body, _startPosX, _startPosY - 5, 90, 30);
+
             g.FillRectangle(general, _startPosX + 10, _startPosY - 20, 60, 15);
+
             g.FillRectangle(tube, _startPosX + 30, _startPosY - 40, 15, 20);
+
             while (yline < 25)
             {
                 g.DrawLine(pen, _startPosX, _startPosY + yline, _startPosX - 30, _startPosY - 18);
-
                 g.DrawLine(pen, _startPosX + 90, _startPosY + yline, _startPosX + 120, _startPosY - 18);
                 yline++;
             }
