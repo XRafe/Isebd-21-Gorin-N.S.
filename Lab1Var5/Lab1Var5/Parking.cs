@@ -9,16 +9,11 @@ namespace Lab1Var5
 {
     public class Parking<T> where T : class, ITransport
     {
-        
-
         private Dictionary<int, T> _places;
-        
 
         private int _maxCount;
-        
 
         private int PictureWidth { get; set; }
-        
 
         private int PictureHeight { get; set; }
 
@@ -39,8 +34,8 @@ namespace Lab1Var5
             if (p._places.Count == p._maxCount)
             {
                 throw new ParkingOverflowException();
-
             }
+
             for (int i = 0; i < p._maxCount; i++)
             {
                 if (p.CheckFreePlace(i))
@@ -54,7 +49,6 @@ namespace Lab1Var5
             }
             return -1;
         }
-        
 
         public static T operator -(Parking<T> p, int index)
         {
@@ -66,13 +60,11 @@ namespace Lab1Var5
             }
             throw new ParkingNotFoundException(index);
         }
-        
 
- private bool CheckFreePlace(int index)
+        private bool CheckFreePlace(int index)
         {
             return !_places.ContainsKey(index);
         }
-        
 
         public void Draw(Graphics g)
         {
@@ -83,20 +75,17 @@ namespace Lab1Var5
                 _places[keys[i]].DrawShip(g);
             }
         }
-        
 
         private void DrawMarking(Graphics g)
         {
             Pen pen = new Pen(Color.Black, 3);
-            
-
             g.DrawRectangle(pen, 0, 0, (_maxCount / 5) * _placeSizeWidth, 480);
+
             for (int i = 0; i < _maxCount / 5; i++)
             {
 
                 for (int j = 0; j < 6; ++j)
                 {
-
                     g.DrawLine(pen, i * _placeSizeWidth, j * _placeSizeHeight,
                     i * _placeSizeWidth + 110, j * _placeSizeHeight);
                 }
@@ -126,9 +115,7 @@ namespace Lab1Var5
                 {
                     throw new ParkingOccupiedPlaceException(ind);
                 }
-
             }
         }
-
     }
 }

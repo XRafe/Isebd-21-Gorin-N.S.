@@ -13,6 +13,5 @@ namespace Lab1Var5
         void MoveTransport(Direction direction);
         void DrawShip(Graphics g);
         void SetMainColor(Color color);
-
     }
 }

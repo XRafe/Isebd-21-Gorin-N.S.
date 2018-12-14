@@ -11,8 +11,6 @@ namespace Lab1Var5
 
     static class Program
     {
-
-
         [STAThread]
         static void Main()
         {

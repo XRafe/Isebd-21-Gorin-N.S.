@@ -13,14 +13,10 @@ namespace Lab1Var5
 {
     public partial class FormShipConfig : Form
     {
-        /// <summary>
-        /// Переменная-выбранная машина
-        /// </summary>
         ITransport ship = null;
-        /// <summary>
-        /// Событие
-        /// </summary>
+
         private event shipDelegate eventAddShip;
+
         public FormShipConfig()
         {
             InitializeComponent();
@@ -34,9 +30,7 @@ namespace Lab1Var5
             panelBlue.MouseDown += panelColor_MouseDown;
             buttonCancel.Click += (object sender, EventArgs e) => { Close(); };
         }
-        /// <summary>
-        /// Отрисовать машину
-        /// </summary>
+
         private void DrawShip()
         {
             if (ship != null)
@@ -49,10 +43,6 @@ namespace Lab1Var5
             }
         }
 
-        /// <summary>
-        /// Добавление события
-        /// </summary>
-        /// <param name="ev"></param>
         public void AddEvent(shipDelegate ev)
         {
             if (eventAddShip == null)
@@ -64,29 +54,16 @@ namespace Lab1Var5
                 eventAddShip += ev;
             }
         }
-        /// <summary>
-        /// Передаем информацию при нажатии на Label
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+
         private void labelShip_MouseDown(object sender, MouseEventArgs e)
         {
             labelShip.DoDragDrop(labelShip.Text, DragDropEffects.Move | DragDropEffects.Copy);
         }
-        /// <summary>
-        /// Передаем информацию при нажатии на Label
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+
         private void labelTuningShip_MouseDown(object sender, MouseEventArgs e)
         {
             labelTuningShip.DoDragDrop(labelTuningShip.Text, DragDropEffects.Move | DragDropEffects.Copy);
         }
-        /// <summary>
-        /// Проверка получаемой информации (ее типа на соответствие требуемому)
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
 
         private void panelShip_DragDrop(object sender, DragEventArgs e)
         {
@@ -103,7 +80,6 @@ namespace Lab1Var5
             DrawShip();
         }
 
-
         private void panelShip_DragEnter(object sender, DragEventArgs e)
         {
             if (e.Data.GetDataPresent(DataFormats.Text))
@@ -115,34 +91,14 @@ namespace Lab1Var5
                 e.Effect = DragDropEffects.None;
             }
         }
-        /// <summary>
-        /// Действия при приеме перетаскиваемой информации
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
 
-        /// <summary>
-        /// Отправляем цвет с панели
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void panelColor_MouseDown(object sender, MouseEventArgs e)
         {
             (sender as Control).DoDragDrop((sender as Control).BackColor,
 DragDropEffects.Move | DragDropEffects.Copy);
 
         }
-        /// <summary>
-        /// Проверка получаемой информации (ее типа на соответствие требуемому)
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
 
-        /// <summary>
-        /// Принимаем основной цвет
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void labelBaseColor_DragDrop(object sender, DragEventArgs e)
         {
             if (ship != null)
@@ -163,11 +119,7 @@ DragDropEffects.Move | DragDropEffects.Copy);
                 e.Effect = DragDropEffects.None;
             }
         }
-        /// <summary>
-        /// Принимаем дополнительный цвет
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+
         private void labelDopColor_DragDrop(object sender, DragEventArgs e)
         {
             if (ship != null)
@@ -179,11 +131,7 @@ DragDropEffects.Move | DragDropEffects.Copy);
                 }
             }
         }
-        /// <summary>
-        /// Добавление машины
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+
         private void buttonAdd_Click_1(object sender, EventArgs e)
         {
             eventAddShip?.Invoke(ship);

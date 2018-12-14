@@ -13,12 +13,9 @@ namespace Lab1Var5
 {
     public partial class FormParking : Form
     {
-
         MultiLevelParking parking;
 
-
         FormShipConfig form;
-
 
         private const int countLevel = 5;
 
@@ -32,33 +29,30 @@ namespace Lab1Var5
 
             parking = new MultiLevelParking(countLevel, pictureBoxParking.Width,
            pictureBoxParking.Height);
-            //заполнение listBox
+
             for (int i = 0; i < countLevel; i++)
             {
                 listBoxLevels.Items.Add("Уровень " + (i + 1));
             }
+
             listBoxLevels.SelectedIndex = 0;
         }
-        /// <summary>
-        /// Метод отрисовки парковки
-        /// </summary>
+
         private void Draw()
         {
             if (listBoxLevels.SelectedIndex > -1)
             {
                 Bitmap bmp = new Bitmap(pictureBoxParking.Width,
   pictureBoxParking.Height);
+
                 Graphics gr = Graphics.FromImage(bmp);
+
                 parking[listBoxLevels.SelectedIndex].Draw(gr);
+
                 pictureBoxParking.Image = bmp;
             }
         }
 
-        /// <summary>
-        /// Обработка нажатия кнопки "Забрать"
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void buttonTakeShip_Click(object sender, EventArgs e)
         {
             if (listBoxLevels.SelectedIndex > -1)
@@ -69,20 +63,26 @@ namespace Lab1Var5
                     {
                         var ship = parking[listBoxLevels.SelectedIndex] -
                    Convert.ToInt32(maskedTextBox.Text);
+
                         if (ship != null)
                         {
                             Bitmap bmp = new Bitmap(pictureBoxTakeShip.Width,
                            pictureBoxTakeShip.Height);
+
                             Graphics gr = Graphics.FromImage(bmp);
+
                             ship.SetPosition(5, 5, pictureBoxTakeShip.Width,
                            pictureBoxTakeShip.Height);
+
                             ship.DrawShip(gr);
+
                             pictureBoxTakeShip.Image = bmp;
                         }
                         else
                         {
                             Bitmap bmp = new Bitmap(pictureBoxTakeShip.Width,
                            pictureBoxTakeShip.Height);
+
                             pictureBoxTakeShip.Image = bmp;
 
                             logger.Info("Изъят корабль " + ship.ToString() + " с места " + maskedTextBox.Text);
@@ -93,8 +93,10 @@ namespace Lab1Var5
                     {
                         MessageBox.Show(ex.Message, "Не найдено", MessageBoxButtons.OK,
                        MessageBoxIcon.Error);
+
                         Bitmap bmp = new Bitmap(pictureBoxTakeShip.Width,
                        pictureBoxTakeShip.Height);
+
                         pictureBoxTakeShip.Image = bmp;
                     }
                     catch (Exception ex)
@@ -105,12 +107,6 @@ namespace Lab1Var5
                 }
             }
         }
-        /// <summary>
-        /// Метод обработки выбора элемента на listBoxLevels
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-
 
         private void buttonSetShip_Click_1(object sender, EventArgs e)
         {
@@ -118,7 +114,6 @@ namespace Lab1Var5
             form.AddEvent(AddShip);
             form.Show();
         }
-
 
         private void AddShip(ITransport ship)
         {
@@ -148,13 +143,6 @@ namespace Lab1Var5
         {
             Draw();
         }
-
-
-
-
-
-
-
 
         private void сохранитьToolStripMenuItem_Click_1(object sender, EventArgs e)
         {

@@ -9,25 +9,17 @@ namespace Lab1Var5
 {
     public abstract class Vehicle : ITransport
     {
-        
-
         protected float _startPosX;
-        
 
         protected float _startPosY;
-        
 
         protected int _pictureWidth;
-        
 
         protected int _pictureHeight;
 
-
         public int MaxSpeed { protected set; get; }
- 
 
         public float Weight { protected set; get; }
-
 
         public Color MainColor { protected set; get; }
 
@@ -35,7 +27,6 @@ namespace Lab1Var5
         {
             MainColor = color;
         }
-
 
         public void SetPosition(int x, int y, int width, int height)
         {
@@ -48,4 +39,3 @@ namespace Lab1Var5
         public abstract void MoveTransport(Direction direction);
     }
 }
-

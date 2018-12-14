@@ -9,20 +9,14 @@ namespace Lab1Var5
 {
     class MultiLevelParking
     {
- 
-
         List<Parking<ITransport>> parkingStages;
-
-
+        
         private const int countPlaces = 20;
         
-
         private int pictureWidth;
-
-
+        
         private int pictureHeight;
-
-
+        
         public MultiLevelParking(int countStages, int pictureWidth, int pictureHeight)
         {
             parkingStages = new List<Parking<ITransport>>();
@@ -35,7 +29,6 @@ namespace Lab1Var5
             }
         }
         
-
         public Parking<ITransport> this[int ind]
         {
             get
@@ -97,9 +90,7 @@ namespace Lab1Var5
             byte[] info = new UTF8Encoding(true).GetBytes(text);
             stream.Write(info, 0, info.Length);
         }
-
         
-
         public bool LoadData(string filename)
         {
             if (!File.Exists(filename))
@@ -123,39 +114,38 @@ namespace Lab1Var5
             var strs = bufferTextFromFile.Split('\n');
             if (strs[0].Contains("CountLeveles"))
             {
-
-
                 int count = Convert.ToInt32(strs[0].Split(':')[1]);
                 if (parkingStages != null)
                 {
                     parkingStages.Clear();
-                }
+                }
+
                 parkingStages = new List<Parking<ITransport>>(count);
             }
             else
             {
-
                 throw new Exception("Неверный формат файла");
-            }
+            }
+
             int counter = -1;
+
             ITransport ship = null;
+
             for (int i = 1; i < strs.Length; ++i)
             {
-                
-
                 if (strs[i] == "Level")
                 {
-                
-
                     counter++;
                     parkingStages.Add(new Parking<ITransport>(countPlaces, pictureWidth,
                     pictureHeight));
                     continue;
                 }
+
                 if (string.IsNullOrEmpty(strs[i]))
                 {
                     continue;
                 }
+
                 if (strs[i].Split(':')[1] == "Ship")
                 {
                     ship = new Ship(strs[i].Split(':')[2]);
@@ -164,12 +154,10 @@ namespace Lab1Var5
                 {
                     ship = new WaterCar(strs[i].Split(':')[2]);
                 }
+
                 parkingStages[counter][Convert.ToInt32(strs[i].Split(':')[0])] = ship;
             }
             return true;
         }
-
-
-
     }
 }

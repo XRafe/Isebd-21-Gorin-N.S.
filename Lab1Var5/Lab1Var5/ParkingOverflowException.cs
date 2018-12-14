@@ -11,5 +11,4 @@ namespace Lab1Var5
         public ParkingOverflowException() : base("На пристани нет свободных мест")
         { }
     }
-
 }
