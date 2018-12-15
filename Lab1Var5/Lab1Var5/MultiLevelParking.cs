@@ -159,5 +159,10 @@ namespace Lab1Var5
             }
             return true;
         }
+
+        public void Sort()
+        {
+            parkingStages.Sort();
+        }
     }
 }

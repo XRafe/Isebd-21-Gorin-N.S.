@@ -8,7 +8,7 @@ using System.Drawing;
 
 namespace Lab1Var5
 {
-    public class WaterCar : Ship
+    public class WaterCar : Ship, IComparable<WaterCar>, IEquatable<WaterCar>
     {
         public Color DopColor { private set; get; }
 
@@ -88,6 +88,101 @@ namespace Lab1Var5
         {
             return base.ToString() + ";" + DopColor.Name + ";" + Wheel + ";" +
            Decoreation + ";" + Whistle;
+        }
+
+        /// <summary>
+        /// Метод интерфейса IComparable для класса SportCar
+        /// </summary>
+        /// <param name="other"></param>
+        /// <returns></returns>
+        public int CompareTo(WaterCar other)
+        {
+            var res = (this is Ship).CompareTo(other is Ship);
+            if (res != 0)
+            {
+                return res;
+            }
+            if (DopColor != other.DopColor)
+            {
+                DopColor.Name.CompareTo(other.DopColor.Name);
+            }
+            if (Wheel != other.Wheel)
+            {
+                return Wheel.CompareTo(other.Wheel);
+            }
+            if (Decoreation != other.Decoreation)
+            {
+                return Decoreation.CompareTo(other.Decoreation);
+            }
+            if (Whistle != other.Whistle)
+            {
+                return Whistle.CompareTo(other.Whistle);
+            }
+            return 0;
+        }
+        /// <summary>
+        /// Метод интерфейса IEquatable для класса SportCar
+        /// </summary>
+        /// <param name="other"></param>
+        /// <returns></returns>
+        public bool Equals(WaterCar other)
+        {
+            var res = (this as Ship).Equals(other as Ship);
+            if (!res)
+            {
+                return res;
+            }
+            if (GetType().Name != other.GetType().Name)
+            {
+                return false;
+            }
+            if (DopColor != other.DopColor)
+            {
+                return false;
+            }
+            if (Wheel != other.Wheel)
+            {
+                return false;
+            }
+            if (Decoreation != other.Decoreation)
+            {
+                return false;
+            }
+            if (Whistle != other.Whistle)
+            {
+                return false;
+            }
+
+            return true;
+        }
+        /// <summary>
+        /// Перегрузка метода от object
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
+        public override bool Equals(Object obj)
+        {
+            if (obj == null)
+            {
+                return false;
+            }
+            WaterCar shipObj = obj as WaterCar;
+            if (shipObj == null)
+            {
+                return false;
+            }
+            else
+            {
+                return Equals(shipObj);
+            }
+        }
+        /// <summary>
+        /// Перегрузка метода от object
+        /// </summary>
+        /// <returns></returns>
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
         }
     }
 }
