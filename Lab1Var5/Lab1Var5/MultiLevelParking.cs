@@ -163,6 +163,7 @@ namespace Lab1Var5
         public void Sort()
         {
             parkingStages.Sort();
-        }
+        }
+
     }
 }

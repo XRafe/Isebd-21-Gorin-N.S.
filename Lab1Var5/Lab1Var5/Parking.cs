@@ -44,7 +44,8 @@ namespace Lab1Var5
             if (p._places.ContainsValue(ship))
             {
                 throw new ParkingAlreadyHaveException();
-            }
+            }
+
             for (int i = 0; i < p._maxCount; i++)
             {
                 if (p.CheckFreePlace(i))
@@ -81,7 +82,8 @@ namespace Lab1Var5
             foreach (var ship in _places)
             {
                 ship.Value.DrawShip(g);
-            }
+            }
+
         }
 
         private void DrawMarking(Graphics g)
