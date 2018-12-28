@@ -71,7 +71,7 @@ namespace Lab1Var5
                     ColorDialog dialogDop = new ColorDialog();
                     if (dialogDop.ShowDialog() == DialogResult.OK)
                     {
-                        var Ship = new WaterShip(100, 1000, dialog.Color, dialogDop.Color,
+                        var Ship = new WaterCar(100, 1000, dialog.Color, dialogDop.Color,
                        true, true, true);
                         int place = parking[listBoxLevels.SelectedIndex] + Ship;
                         if (place == -1)
