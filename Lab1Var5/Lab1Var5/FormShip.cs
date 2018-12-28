@@ -18,7 +18,7 @@ namespace Lab1Var5
         {
             InitializeComponent();
         }
-  
+
         private void Draw()
         {
             Bitmap bmp = new Bitmap(pictureBoxShips.Width, pictureBoxShips.Height);
@@ -66,5 +66,6 @@ namespace Lab1Var5
            pictureBoxShips.Height);
             Draw();
         }
+
     }
 }

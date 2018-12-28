@@ -10,7 +10,6 @@ namespace Lab1Var5
     public abstract class Vehicle : ITransport
     {
 
-
         protected float _startPosX;
 
 
@@ -30,6 +29,7 @@ namespace Lab1Var5
 
 
         public Color MainColor { protected set; get; }
+
         public void SetPosition(int x, int y, int width, int height)
         {
             _startPosX = x;
@@ -37,8 +37,9 @@ namespace Lab1Var5
             _pictureWidth = width;
             _pictureHeight = height;
         }
+        
         public abstract void DrawShip(Graphics g);
+
         public abstract void MoveTransport(Direction direction);
     }
 }
-

@@ -8,10 +8,6 @@ using System.Drawing;
 
 namespace Lab1Var5
 {
-
-
-
-
     public class Ship : Vehicle
     {
         
@@ -23,6 +19,7 @@ namespace Lab1Var5
 
 
         public Ship(int maxSpeed, float weight, Color mainColor)
+
         {
             MaxSpeed = maxSpeed;
             Weight = weight;
@@ -34,15 +31,12 @@ namespace Lab1Var5
             float step = MaxSpeed * 100 / Weight;
             switch (direction)
             {
-                
-
                 case Direction.Right:
                     if (_startPosX + step < _pictureWidth - carWidth)
                     {
                         _startPosX += step;
                     }
                     break;
-                
 
                 case Direction.Left:
                     if (_startPosX - step > 0)
@@ -50,7 +44,6 @@ namespace Lab1Var5
                         _startPosX -= step;
                     }
                     break;
-                
 
                 case Direction.Up:
                     if (_startPosY - step > 0)
@@ -58,8 +51,7 @@ namespace Lab1Var5
                         _startPosY -= step;
                     }
                     break;
-                
-
+                    
                 case Direction.Down:
                     if (_startPosY + step < _pictureHeight - carHeight)
                     {
@@ -68,7 +60,6 @@ namespace Lab1Var5
                     break;
             }
         }
- 
 
         public override void DrawShip(Graphics g)
         {
@@ -98,4 +89,3 @@ namespace Lab1Var5
     }
 
 }
-
