@@ -18,7 +18,7 @@ namespace Lab1Var5
         {
             InitializeComponent();
         }
-  
+
         private void Draw()
         {
             Bitmap bmp = new Bitmap(pictureBoxShips.Width, pictureBoxShips.Height);
@@ -26,7 +26,7 @@ namespace Lab1Var5
             ship.DrawShip(gr);
             pictureBoxShips.Image = bmp;
         }
-        
+
         private void buttonCreate_Click(object sender, EventArgs e)
         {
             Random rnd = new Random();
@@ -56,7 +56,7 @@ namespace Lab1Var5
             }
             Draw();
         }
-        
+
         private void buttonCrTun_Click(object sender, EventArgs e)
         {
             Random rnd = new Random();

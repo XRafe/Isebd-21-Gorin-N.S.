@@ -12,7 +12,6 @@ namespace Lab1Var5
 {
     public partial class FormParking : Form
     {
-
         Parking<ITransport> parking;
         public FormParking()
         {
@@ -29,7 +28,6 @@ namespace Lab1Var5
             parking.Draw(gr);
             pictureBoxGeneral.Image = bmp;
         }
-  
 
         private void buttonToPut_Click(object sender, EventArgs e)
         {
@@ -42,10 +40,8 @@ namespace Lab1Var5
             }
         }
 
-
         private void buttonToPutTun_Click(object sender, EventArgs e)
         {
-            
             ColorDialog dialog = new ColorDialog();
             if (dialog.ShowDialog() == DialogResult.OK)
             {

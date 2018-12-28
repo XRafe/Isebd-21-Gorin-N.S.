@@ -10,18 +10,13 @@ namespace Lab1Var5
 {
     public class WaterCar : Ship
     {
-        
-
         public Color DopColor { private set; get; }
 
         public bool Wheel { private set; get; }
 
         public bool Decoreation { private set; get; }
 
-
         public bool Whistle { private set; get; }
-
-
 
         public WaterCar(int maxSpeed, float weight, Color mainColor, Color dopColor, bool
        wheel, bool decoreation, bool whistle) :
@@ -33,6 +28,7 @@ namespace Lab1Var5
             Decoreation = decoreation;
             Whistle = whistle;
         }
+
         public override void DrawShip(Graphics g)
         {
             Pen pen = new Pen(Color.Black);
@@ -71,9 +67,6 @@ namespace Lab1Var5
             {
                 g.FillEllipse(Wh, _startPosX + 10, _startPosY + 35, 40, 40);
             }
-
-
         }
     }
 }
-

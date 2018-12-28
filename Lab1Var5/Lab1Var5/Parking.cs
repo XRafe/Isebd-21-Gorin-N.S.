@@ -9,21 +9,15 @@ namespace Lab1Var5
 {
     public class Parking<T> where T : class, ITransport
     {
-
         private T[] _places;
-        
 
         private int PictureWidth { get; set; }
-        
 
         private int PictureHeight { get; set; }
-        
 
         private int _placeSizeWidth = 200;
-        
 
         private int _placeSizeHeight = 100;
-
 
         public Parking(int sizes, int pictureWidth, int pictureHeight)
         {
@@ -35,7 +29,6 @@ namespace Lab1Var5
                 _places[i] = null;
             }
         }
-        
 
         public static int operator +(Parking<T> p, T car)
         {
@@ -52,9 +45,8 @@ namespace Lab1Var5
             }
             return -1;
         }
-        
 
-                public static T operator -(Parking<T> p, int index)
+        public static T operator -(Parking<T> p, int index)
         {
             if (index < 0 || index > p._places.Length)
             {
@@ -68,13 +60,11 @@ namespace Lab1Var5
             }
             return null;
         }
-        
 
- private bool CheckFreePlace(int index)
+        private bool CheckFreePlace(int index)
         {
             return _places[index] == null;
         }
-
 
         public void Draw(Graphics g)
         {
@@ -89,11 +79,10 @@ namespace Lab1Var5
             }
         }
 
-
         private void DrawMarking(Graphics g)
         {
             Pen pen = new Pen(Color.Black, 3);
-        
+
             g.DrawRectangle(pen, 0, 0, (_places.Length / 5) * _placeSizeWidth, 480);
             for (int i = 0; i < _places.Length / 5; i++)
             {
