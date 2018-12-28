@@ -128,9 +128,6 @@ namespace Lab1Var5
             }
         }
 
-        /// <summary>
-        /// Метод интерфейса IEnumerator для получения текущего элемента
-        /// </summary>
         public T Current
         {
             get
@@ -138,9 +135,7 @@ namespace Lab1Var5
                 return _places[_places.Keys.ToList()[_currentIndex]];
             }
         }
-        /// <summary>
-        /// Метод интерфейса IEnumerator для получения текущего элемента
-        /// </summary>
+
         object IEnumerator.Current
         {
             get
@@ -148,17 +143,12 @@ namespace Lab1Var5
                 return Current;
             }
         }
-        /// <summary>
-        /// Метод интерфейса IEnumerator, вызываемый при удалении объекта
-        /// </summary>
+
         public void Dispose()
         {
             _places.Clear();
         }
-        /// <summary>
-        /// Метод интерфейса IEnumerator для перехода к следующему элементу или началу коллекции
-        /// </summary>
-        /// <returns></returns>
+
         public bool MoveNext()
         {
             if (_currentIndex + 1 >= _places.Count)
@@ -169,34 +159,22 @@ namespace Lab1Var5
             _currentIndex++;
             return true;
         }
-        /// <summary>
-        /// Метод интерфейса IEnumerator для сброса и возврата к началу коллекции
-        /// </summary>
+
         public void Reset()
         {
             _currentIndex = -1;
         }
-        /// <summary>
-        /// Метод интерфейса IEnumerable
-        /// </summary>
-        /// <returns></returns>
+
         public IEnumerator<T> GetEnumerator()
         {
             return this;
         }
-        /// <summary>
-        /// Метод интерфейса IEnumerable
-        /// </summary>
-        /// <returns></returns>
+
         IEnumerator IEnumerable.GetEnumerator()
         {
             return GetEnumerator();
         }
-        /// <summary>
-        /// Метод интерфейса IComparable
-        /// </summary>
-        /// <param name="other"></param>
-        /// <returns></returns>
+
         public int CompareTo(Parking<T> other)
         {
             if (_places.Count > other._places.Count)

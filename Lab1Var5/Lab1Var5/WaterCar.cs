@@ -90,11 +90,6 @@ namespace Lab1Var5
            Decoreation + ";" + Whistle;
         }
 
-        /// <summary>
-        /// Метод интерфейса IComparable для класса SportCar
-        /// </summary>
-        /// <param name="other"></param>
-        /// <returns></returns>
         public int CompareTo(WaterCar other)
         {
             var res = (this is Ship).CompareTo(other is Ship);
@@ -120,11 +115,7 @@ namespace Lab1Var5
             }
             return 0;
         }
-        /// <summary>
-        /// Метод интерфейса IEquatable для класса SportCar
-        /// </summary>
-        /// <param name="other"></param>
-        /// <returns></returns>
+
         public bool Equals(WaterCar other)
         {
             var res = (this as Ship).Equals(other as Ship);
@@ -155,11 +146,7 @@ namespace Lab1Var5
 
             return true;
         }
-        /// <summary>
-        /// Перегрузка метода от object
-        /// </summary>
-        /// <param name="obj"></param>
-        /// <returns></returns>
+
         public override bool Equals(Object obj)
         {
             if (obj == null)
@@ -176,14 +163,10 @@ namespace Lab1Var5
                 return Equals(shipObj);
             }
         }
-        /// <summary>
-        /// Перегрузка метода от object
-        /// </summary>
-        /// <returns></returns>
+
         public override int GetHashCode()
         {
             return base.GetHashCode();
         }
     }
 }
-

@@ -216,6 +216,7 @@
         private System.Windows.Forms.OpenFileDialog openFileDialog;
 
         private System.Windows.Forms.SaveFileDialog saveFileDialog;
+
         private System.Windows.Forms.Button button1;
     }
 }

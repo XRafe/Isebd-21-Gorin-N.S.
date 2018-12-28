@@ -10,9 +10,9 @@ namespace Lab1Var5
 {
     public class Ship : Vehicle, IComparable<Ship>, IEquatable<Ship>
     {
-        protected const int carWidth = 240;
+        protected const int ShipWidth = 240;
 
-        protected const int carHeight = 60;
+        protected const int ShipHeight = 60;
 
         public Ship(int maxSpeed, float weight, Color mainColor)
         {
@@ -38,7 +38,7 @@ namespace Lab1Var5
             switch (direction)
             {
                 case Direction.Right:
-                    if (_startPosX + step < _pictureWidth - carWidth)
+                    if (_startPosX + step < _pictureWidth - ShipWidth)
                     {
                         _startPosX += step;
                     }
@@ -59,7 +59,7 @@ namespace Lab1Var5
                     break;
 
                 case Direction.Down:
-                    if (_startPosY + step < _pictureHeight - carHeight)
+                    if (_startPosY + step < _pictureHeight - ShipHeight)
                     {
                         _startPosY += step;
                     }
@@ -113,11 +113,7 @@ namespace Lab1Var5
             }
             return 0;
         }
-        /// <summary>
-        /// Метод интерфейса IEquatable для класса Car
-        /// </summary>
-        /// <param name="other"></param>
-        /// <returns></returns>
+
         public bool Equals(Ship other)
         {
             if (other == null)
@@ -142,11 +138,7 @@ namespace Lab1Var5
             }
             return true;
         }
-        /// <summary>
-        /// Перегрузка метода от object
-        /// </summary>
-        /// <param name="obj"></param>
-        /// <returns></returns>
+
         public override bool Equals(Object obj)
         {
             if (obj == null)
@@ -163,10 +155,7 @@ namespace Lab1Var5
                 return Equals(shipObj);
             }
         }
-        /// <summary>
-        /// Перегрузка метода от object
-        /// </summary>
-        /// <returns></returns>
+
         public override int GetHashCode()
         {
             return base.GetHashCode();
