@@ -123,4 +123,3 @@
         private System.Windows.Forms.Button CrTun;
     }
 }
-

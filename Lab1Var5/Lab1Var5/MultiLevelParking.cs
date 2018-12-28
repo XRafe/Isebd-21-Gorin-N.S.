@@ -40,7 +40,7 @@ namespace Lab1Var5
                 return null;
             }
         }
-
+      
         public bool SaveData(string filename)
         {
             if (File.Exists(filename))

@@ -32,6 +32,7 @@ namespace Lab1Var5
         }
 
         private void Draw()
+
         {
             if (listBoxLevels.SelectedIndex > -1)
             {

@@ -3,6 +3,7 @@
     partial class FormParking
     {
         private System.ComponentModel.IContainer components = null;
+        
 
         protected override void Dispose(bool disposing)
         {
@@ -35,7 +36,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTakeShip)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
-
+          
             this.pictureBoxParking.Location = new System.Drawing.Point(-2, 27);
             this.pictureBoxParking.Name = "pictureBoxParking";
             this.pictureBoxParking.Size = new System.Drawing.Size(529, 437);
@@ -81,6 +82,7 @@
             this.listBoxLevels.Size = new System.Drawing.Size(176, 82);
             this.listBoxLevels.TabIndex = 8;
             this.listBoxLevels.SelectedIndexChanged += new System.EventHandler(this.listBoxLevels_SelectedIndexChanged_1);
+
 
             this.buttonSetShip.Location = new System.Drawing.Point(536, 113);
             this.buttonSetShip.Name = "buttonSetShip";
@@ -145,6 +147,7 @@
         }
 
         #endregion
+
 
         private System.Windows.Forms.PictureBox pictureBoxParking;
 
