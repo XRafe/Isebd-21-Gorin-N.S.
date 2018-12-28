@@ -60,7 +60,7 @@ namespace Lab1Var5
         private void button1_Click(object sender, EventArgs e)
         {
             Random rnd = new Random();
-            ship = new WaterShip(rnd.Next(100, 300), rnd.Next(1000, 2000), Color.Blue,
+            ship = new WaterCar(rnd.Next(100, 300), rnd.Next(1000, 2000), Color.Blue,
            Color.Yellow, true, true, true);
             ship.SetPosition(rnd.Next(10, 100), rnd.Next(10, 100), pictureBoxShips.Width,
            pictureBoxShips.Height);
