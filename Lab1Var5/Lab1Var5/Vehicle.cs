@@ -21,6 +21,7 @@ namespace Lab1Var5
  
         public float Weight { protected set; get; }
         
+
         public Color MainColor { protected set; get; }
 
         public void SetPosition(int x, int y, int width, int height)

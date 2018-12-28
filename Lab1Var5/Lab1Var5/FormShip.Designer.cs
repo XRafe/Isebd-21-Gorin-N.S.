@@ -14,7 +14,7 @@
         }
 
         #region Код, автоматически созданный конструктором форм Windows
-        
+
         private void InitializeComponent()
         {
             this.CrSt = new System.Windows.Forms.Button();
@@ -89,6 +89,7 @@
             this.CrTun.Text = "Create Tuning";
             this.CrTun.UseVisualStyleBackColor = true;
             this.CrTun.Click += new System.EventHandler(this.button1_Click);
+
 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;

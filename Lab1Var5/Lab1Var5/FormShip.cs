@@ -66,5 +66,6 @@ namespace Lab1Var5
            pictureBoxShips.Height);
             Draw();
         }
+
     }
 }

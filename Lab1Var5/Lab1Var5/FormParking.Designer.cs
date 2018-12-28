@@ -5,6 +5,7 @@
 
         private System.ComponentModel.IContainer components = null;
         
+
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -15,7 +16,7 @@
         }
 
         #region Windows Form Designer generated code
-        
+     
         private void InitializeComponent()
         {
             this.pictureBoxParking = new System.Windows.Forms.PictureBox();
@@ -93,6 +94,7 @@
             this.listBoxLevels.TabIndex = 8;
             this.listBoxLevels.SelectedIndexChanged += new System.EventHandler(this.listBoxLevels_SelectedIndexChanged_1);
 
+
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(721, 468);
@@ -109,12 +111,13 @@
             this.Text = "Пристань";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxParking)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTakeShip)).EndInit();
+
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
 
         #endregion
+
 
         private System.Windows.Forms.PictureBox pictureBoxParking;
 

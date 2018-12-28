@@ -28,7 +28,7 @@ namespace Lab1Var5
             PictureWidth = pictureWidth;
             PictureHeight = pictureHeight;
         }
-        
+
         public static int operator +(Parking<T> p, T Ship)
         {
             if (p._places.Count == p._maxCount)
@@ -39,7 +39,9 @@ namespace Lab1Var5
             {
                 if (p.CheckFreePlace(i))
                 {
+
                     p._places.Add(i, Ship);
+
                     p._places[i].SetPosition(5 + i / 5 * p._placeSizeWidth + 5,
                      i % 5 * p._placeSizeHeight + 15, p.PictureWidth,
                     p.PictureHeight);
@@ -48,18 +50,20 @@ namespace Lab1Var5
             }
             return -1;
         }
-        
+
         public static T operator -(Parking<T> p, int index)
         {
             if (!p.CheckFreePlace(index))
             {
                 T Ship = p._places[index];
                 p._places.Remove(index);
+
                 return Ship;
             }
             return null;
         }
-        
+
+
         private bool CheckFreePlace(int index)
         {
             return !_places.ContainsKey(index);
@@ -81,6 +85,7 @@ namespace Lab1Var5
 
             g.DrawRectangle(pen, 0, 0, (_maxCount / 5) * _placeSizeWidth, 480);
             for (int i = 0; i < _maxCount / 5; i++)
+
             {
 
                 for (int j = 0; j < 6; ++j)
