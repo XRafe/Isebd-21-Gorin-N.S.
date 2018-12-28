@@ -14,6 +14,7 @@ namespace Lab1Var5
     {
         MultiLevelParking parking;
 
+
         FormShipConfig form;
 
         private const int countLevel = 5;
@@ -32,6 +33,7 @@ namespace Lab1Var5
         }
 
         private void Draw()
+
         {
             if (listBoxLevels.SelectedIndex > -1)
             {

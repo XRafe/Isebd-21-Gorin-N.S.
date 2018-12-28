@@ -11,7 +11,7 @@ namespace Lab1Var5
         List<Parking<ITransport>> parkingStages;
 
         private const int countPlaces = 20;
-        
+      
         public MultiLevelParking(int countStages, int pictureWidth, int pictureHeight)
         {
             parkingStages = new List<Parking<ITransport>>();

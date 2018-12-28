@@ -3,6 +3,7 @@
     partial class FormParking
     {
         private System.ComponentModel.IContainer components = null;
+        
 
         protected override void Dispose(bool disposing)
         {
@@ -68,12 +69,24 @@
             this.label2.TabIndex = 5;
             this.label2.Text = "Забрать корабль";
 
-            this.listBoxLevels.FormattingEnabled = true;
-            this.listBoxLevels.Location = new System.Drawing.Point(533, 12);
-            this.listBoxLevels.Name = "listBoxLevels";
-            this.listBoxLevels.Size = new System.Drawing.Size(176, 95);
-            this.listBoxLevels.TabIndex = 8;
-            this.listBoxLevels.SelectedIndexChanged += new System.EventHandler(this.listBoxLevels_SelectedIndexChanged_1);
+
+            this.buttonSetShip.Location = new System.Drawing.Point(533, 199);
+            this.buttonSetShip.Name = "buttonSetShip";
+            this.buttonSetShip.Size = new System.Drawing.Size(89, 55);
+            this.buttonSetShip.TabIndex = 6;
+            this.buttonSetShip.Text = "Припарковать корабль";
+            this.buttonSetShip.UseVisualStyleBackColor = true;
+            this.buttonSetShip.Click += new System.EventHandler(this.buttonSetShip_Click);
+
+            this.buttonSetTuningShip.Location = new System.Drawing.Point(629, 199);
+            this.buttonSetTuningShip.Name = "buttonSetTuningShip";
+            this.buttonSetTuningShip.Size = new System.Drawing.Size(90, 55);
+            this.buttonSetTuningShip.TabIndex = 7;
+            this.buttonSetTuningShip.Text = "Припарковать тюнинг корабль";
+            this.buttonSetTuningShip.UseVisualStyleBackColor = true;
+            this.buttonSetTuningShip.Click += new System.EventHandler(this.buttonSetTuningShip_Click);
+
+
 
             this.buttonSetShip.Location = new System.Drawing.Point(536, 113);
             this.buttonSetShip.Name = "buttonSetShip";
@@ -98,11 +111,13 @@
             this.Text = "Пристань";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxParking)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTakeShip)).EndInit();
+
             this.ResumeLayout(false);
             this.PerformLayout();
         }
 
         #endregion
+
 
         private System.Windows.Forms.PictureBox pictureBoxParking;
 

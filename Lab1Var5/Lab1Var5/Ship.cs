@@ -27,7 +27,7 @@ namespace Lab1Var5
             switch (direction)
             {
                 case Direction.Right:
-                    if (_startPosX + step < _pictureWidth - carWidth)
+                    if (_startPosX + step < _pictureWidth - ShipWidth)
                     {
                         _startPosX += step;
                     }
@@ -48,7 +48,7 @@ namespace Lab1Var5
                     break;
 
                 case Direction.Down:
-                    if (_startPosY + step < _pictureHeight - carHeight)
+                    if (_startPosY + step < _pictureHeight - ShipHeight)
                     {
                         _startPosY += step;
                     }

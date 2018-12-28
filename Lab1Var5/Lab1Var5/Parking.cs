@@ -10,10 +10,11 @@ namespace Lab1Var5
     public class Parking<T> where T : class, ITransport
     {
         private Dictionary<int, T> _places;
-
+        
         private int _maxCount;
 
         private int PictureWidth { get; set; }
+
 
         private int PictureHeight { get; set; }
 
@@ -40,6 +41,7 @@ namespace Lab1Var5
                 if (p.CheckFreePlace(i))
                 {
                     p._places.Add(i, Ship);
+
                     p._places[i].SetPosition(5 + i / 5 * p._placeSizeWidth + 5,
                      i % 5 * p._placeSizeHeight + 15, p.PictureWidth,
                     p.PictureHeight);
@@ -84,6 +86,7 @@ namespace Lab1Var5
             {
                 for (int j = 0; j < 6; ++j)
                 {
+
                     g.DrawLine(pen, i * _placeSizeWidth, j * _placeSizeHeight,
                     i * _placeSizeWidth + 110, j * _placeSizeHeight);
                 }

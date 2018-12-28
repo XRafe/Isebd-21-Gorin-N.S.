@@ -67,6 +67,7 @@ namespace Lab1Var5
         public void SetDopColor(Color color)
         {
             DopColor = color;
+
         }
     }
 }
