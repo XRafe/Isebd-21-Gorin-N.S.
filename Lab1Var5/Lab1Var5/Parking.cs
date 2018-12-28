@@ -30,13 +30,13 @@ namespace Lab1Var5
             }
         }
 
-        public static int operator +(Parking<T> p, T car)
+        public static int operator +(Parking<T> p, T Ship)
         {
             for (int i = 0; i < p._places.Length; i++)
             {
                 if (p.CheckFreePlace(i))
                 {
-                    p._places[i] = car;
+                    p._places[i] = Ship;
                     p._places[i].SetPosition(5 + i / 5 * p._placeSizeWidth + 5,
                      i % 5 * p._placeSizeHeight + 15, p.PictureWidth,
                     p.PictureHeight);
@@ -54,9 +54,9 @@ namespace Lab1Var5
             }
             if (!p.CheckFreePlace(index))
             {
-                T car = p._places[index];
+                T Ship = p._places[index];
                 p._places[index] = null;
-                return car;
+                return Ship;
             }
             return null;
         }
