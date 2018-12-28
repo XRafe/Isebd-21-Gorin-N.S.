@@ -14,46 +14,30 @@ namespace Lab1Var5
     {
         private Ship ship;
 
-        /// <summary>
-        /// Конструктор
-        /// </summary>
         public FormShip()
         {
             InitializeComponent();
         }
   
-
         private void Draw()
         {
-            Bitmap bmp = new Bitmap(pictureBoxCars.Width, pictureBoxCars.Height);
+            Bitmap bmp = new Bitmap(pictureBoxShips.Width, pictureBoxShips.Height);
             Graphics gr = Graphics.FromImage(bmp);
             ship.DrawShip(gr);
-            pictureBoxCars.Image = bmp;
+            pictureBoxShips.Image = bmp;
         }
-        /// <summary>
-        /// Обработка нажатия кнопки "Создать"
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+
         private void buttonCreate_Click(object sender, EventArgs e)
         {
             Random rnd = new Random();
             ship = new Ship(rnd.Next(100, 300), rnd.Next(1000, 2000), Color.Blue);
-            ship.SetPosition(rnd.Next(10, 100), rnd.Next(10, 100), pictureBoxCars.Width,
-           pictureBoxCars.Height);
+            ship.SetPosition(rnd.Next(10, 100), rnd.Next(10, 100), pictureBoxShips.Width,
+           pictureBoxShips.Height);
             Draw();
         }
 
-
-
-        /// <summary>
-        /// Обработка нажатия кнопок управления
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void buttonMove_Click(object sender, EventArgs e)
         {
-            //получаем имя кнопки
             string name = (sender as Button).Name;
             switch (name)
             {
@@ -72,21 +56,15 @@ namespace Lab1Var5
             }
             Draw();
         }
-
-        private void Button_Down_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        
         private void button1_Click(object sender, EventArgs e)
         {
             Random rnd = new Random();
             ship = new WaterCar(rnd.Next(100, 300), rnd.Next(1000, 2000), Color.Blue,
            Color.Yellow, true, true, true);
-            ship.SetPosition(rnd.Next(10, 100), rnd.Next(10, 100), pictureBoxCars.Width,
-           pictureBoxCars.Height);
+            ship.SetPosition(rnd.Next(10, 100), rnd.Next(10, 100), pictureBoxShips.Width,
+           pictureBoxShips.Height);
             Draw();
         }
     }
 }
-    

@@ -8,14 +8,10 @@ namespace Lab1Var5
 {
     class MultiLevelParking
     {
-
-
         List<Parking<ITransport>> parkingStages;
-        
 
         private const int countPlaces = 20;
-
-
+        
         public MultiLevelParking(int countStages, int pictureWidth, int pictureHeight)
         {
             parkingStages = new List<Parking<ITransport>>();
@@ -37,6 +33,5 @@ namespace Lab1Var5
                 return null;
             }
         }
-
     }
 }

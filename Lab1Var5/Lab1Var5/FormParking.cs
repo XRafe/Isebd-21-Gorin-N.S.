@@ -12,12 +12,9 @@ namespace Lab1Var5
 {
     public partial class FormParking : Form
     {
-        
         MultiLevelParking parking;
 
-
         FormShipConfig form;
-       
 
         private const int countLevel = 5;
 
@@ -26,16 +23,14 @@ namespace Lab1Var5
             InitializeComponent();
             parking = new MultiLevelParking(countLevel, pictureBoxParking.Width,
            pictureBoxParking.Height);
-            //заполнение listBox
+
             for (int i = 0; i < countLevel; i++)
             {
                 listBoxLevels.Items.Add("Уровень " + (i + 1));
             }
             listBoxLevels.SelectedIndex = 0;
         }
-        /// <summary>
-        /// Метод отрисовки парковки
-        /// </summary>
+
         private void Draw()
         {
             if (listBoxLevels.SelectedIndex > -1)
@@ -48,11 +43,6 @@ namespace Lab1Var5
             }
         }
 
-        /// <summary>
-        /// Обработка нажатия кнопки "Забрать"
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void buttonTakeShip_Click(object sender, EventArgs e)
         {
             if (listBoxLevels.SelectedIndex > -1)
@@ -81,12 +71,6 @@ namespace Lab1Var5
                 }
             }
         }
-        /// <summary>
-        /// Метод обработки выбора элемента на listBoxLevels
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-
 
         private void buttonSetShip_Click_1(object sender, EventArgs e)
         {
@@ -94,10 +78,7 @@ namespace Lab1Var5
             form.AddEvent(AddShip);
             form.Show();
         }
-        /// <summary>
-        /// Метод добавления машины
-        /// </summary>
-        /// <param name="car"></param>
+
         private void AddShip(ITransport ship)
         {
             if (ship != null && listBoxLevels.SelectedIndex > -1)

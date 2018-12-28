@@ -2,15 +2,8 @@
 {
     partial class FormShip
     {
-        /// <summary>
-        /// Обязательная переменная конструктора.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Освободить все используемые ресурсы.
-        /// </summary>
-        /// <param name="disposing">истинно, если управляемый ресурс должен быть удален; иначе ложно.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -22,10 +15,6 @@
 
         #region Код, автоматически созданный конструктором форм Windows
 
-        /// <summary>
-        /// Требуемый метод для поддержки конструктора — не изменяйте 
-        /// содержимое этого метода с помощью редактора кода.
-        /// </summary>
         private void InitializeComponent()
         {
             this.CrSt = new System.Windows.Forms.Button();
@@ -33,13 +22,11 @@
             this.buttonDown = new System.Windows.Forms.Button();
             this.buttonRight = new System.Windows.Forms.Button();
             this.buttonUp = new System.Windows.Forms.Button();
-            this.pictureBoxCars = new System.Windows.Forms.PictureBox();
+            this.pictureBoxShips = new System.Windows.Forms.PictureBox();
             this.CrTun = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCars)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxShips)).BeginInit();
             this.SuspendLayout();
-            // 
-            // CrSt
-            // 
+
             this.CrSt.Location = new System.Drawing.Point(8, 8);
             this.CrSt.Name = "CrSt";
             this.CrSt.Size = new System.Drawing.Size(91, 23);
@@ -47,9 +34,7 @@
             this.CrSt.Text = "Create Standart";
             this.CrSt.UseVisualStyleBackColor = true;
             this.CrSt.Click += new System.EventHandler(this.buttonCreate_Click);
-            // 
-            // buttonLeft
-            // 
+
             this.buttonLeft.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonLeft.BackgroundImage = global::Lab1Var5.Properties.Resources.left1;
             this.buttonLeft.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
@@ -59,9 +44,7 @@
             this.buttonLeft.TabIndex = 3;
             this.buttonLeft.UseVisualStyleBackColor = true;
             this.buttonLeft.Click += new System.EventHandler(this.buttonMove_Click);
-            // 
-            // buttonDown
-            // 
+
             this.buttonDown.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonDown.BackgroundImage = global::Lab1Var5.Properties.Resources.down1;
             this.buttonDown.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
@@ -71,9 +54,7 @@
             this.buttonDown.TabIndex = 4;
             this.buttonDown.UseVisualStyleBackColor = true;
             this.buttonDown.Click += new System.EventHandler(this.buttonMove_Click);
-            // 
-            // buttonRight
-            // 
+
             this.buttonRight.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonRight.BackgroundImage = global::Lab1Var5.Properties.Resources.right1;
             this.buttonRight.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
@@ -83,9 +64,7 @@
             this.buttonRight.TabIndex = 5;
             this.buttonRight.UseVisualStyleBackColor = true;
             this.buttonRight.Click += new System.EventHandler(this.buttonMove_Click);
-            // 
-            // buttonUp
-            // 
+
             this.buttonUp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonUp.BackgroundImage = global::Lab1Var5.Properties.Resources.up1;
             this.buttonUp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
@@ -95,18 +74,14 @@
             this.buttonUp.TabIndex = 2;
             this.buttonUp.UseVisualStyleBackColor = true;
             this.buttonUp.Click += new System.EventHandler(this.buttonMove_Click);
-            // 
-            // pictureBoxCars
-            // 
-            this.pictureBoxCars.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBoxCars.Location = new System.Drawing.Point(0, 0);
-            this.pictureBoxCars.Name = "pictureBoxCars";
-            this.pictureBoxCars.Size = new System.Drawing.Size(736, 333);
-            this.pictureBoxCars.TabIndex = 0;
-            this.pictureBoxCars.TabStop = false;
-            // 
-            // CrTun
-            // 
+
+            this.pictureBoxShips.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBoxShips.Location = new System.Drawing.Point(0, 0);
+            this.pictureBoxShips.Name = "pictureBoxShips";
+            this.pictureBoxShips.Size = new System.Drawing.Size(736, 333);
+            this.pictureBoxShips.TabIndex = 0;
+            this.pictureBoxShips.TabStop = false;
+
             this.CrTun.Location = new System.Drawing.Point(511, 8);
             this.CrTun.Name = "CrTun";
             this.CrTun.Size = new System.Drawing.Size(97, 23);
@@ -114,9 +89,7 @@
             this.CrTun.Text = "Create Tuning";
             this.CrTun.UseVisualStyleBackColor = true;
             this.CrTun.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // FormShip
-            // 
+
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(620, 333);
@@ -126,23 +99,27 @@
             this.Controls.Add(this.buttonLeft);
             this.Controls.Add(this.buttonUp);
             this.Controls.Add(this.CrSt);
-            this.Controls.Add(this.pictureBoxCars);
+            this.Controls.Add(this.pictureBoxShips);
             this.Name = "FormShip";
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCars)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxShips)).EndInit();
             this.ResumeLayout(false);
-
         }
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBoxCars;
+        private System.Windows.Forms.PictureBox pictureBoxShips;
+
         private System.Windows.Forms.Button CrSt;
+
         private System.Windows.Forms.Button buttonUp;
+
         private System.Windows.Forms.Button buttonLeft;
+
         private System.Windows.Forms.Button buttonDown;
+
         private System.Windows.Forms.Button buttonRight;
+
         private System.Windows.Forms.Button CrTun;
     }
 }
-
