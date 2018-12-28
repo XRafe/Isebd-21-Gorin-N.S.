@@ -91,4 +91,3 @@ namespace Lab1Var5
         }
     }
 }
-

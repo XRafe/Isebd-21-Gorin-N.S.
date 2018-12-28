@@ -56,8 +56,6 @@ namespace Lab1Var5
                    Environment.NewLine, fs);
                     foreach (var level in parkingStages)
                     {
-                        
-
                         WriteToFile("Level" + Environment.NewLine, fs);
                         for (int i = 0; i < countPlaces; i++)
                         {

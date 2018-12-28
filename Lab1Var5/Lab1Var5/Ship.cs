@@ -10,9 +10,9 @@ namespace Lab1Var5
 {
     public class Ship : Vehicle
     {
-        protected const int carWidth = 240;
+        protected const int ShipWidth = 240;
 
-        protected const int carHeight = 60;
+        protected const int ShipHeight = 60;
 
         public Ship(int maxSpeed, float weight, Color mainColor)
         {
@@ -38,7 +38,7 @@ namespace Lab1Var5
             switch (direction)
             {
                 case Direction.Right:
-                    if (_startPosX + step < _pictureWidth - carWidth)
+                    if (_startPosX + step < _pictureWidth - ShipWidth)
                     {
                         _startPosX += step;
                     }
@@ -59,7 +59,7 @@ namespace Lab1Var5
                     break;
 
                 case Direction.Down:
-                    if (_startPosY + step < _pictureHeight - carHeight)
+                    if (_startPosY + step < _pictureHeight - ShipHeight)
                     {
                         _startPosY += step;
                     }
