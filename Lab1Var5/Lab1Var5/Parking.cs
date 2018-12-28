@@ -9,26 +9,18 @@ namespace Lab1Var5
 {
     public class Parking<T> where T : class, ITransport
     {
-        
-
         private Dictionary<int, T> _places;
-
-
+        
         private int _maxCount;
         
-
         private int PictureWidth { get; set; }
-
-
+        
         private int PictureHeight { get; set; }
 
         private int _placeSizeWidth = 210;
 
         private int _placeSizeHeight = 80;
         
-
-        
-
         public Parking(int sizes, int pictureWidth, int pictureHeight)
         {
             _maxCount = sizes;
@@ -36,9 +28,8 @@ namespace Lab1Var5
             PictureWidth = pictureWidth;
             PictureHeight = pictureHeight;
         }
-
-
-        public static int operator +(Parking<T> p, T car)
+        
+        public static int operator +(Parking<T> p, T Ship)
         {
             if (p._places.Count == p._maxCount)
             {
@@ -48,7 +39,7 @@ namespace Lab1Var5
             {
                 if (p.CheckFreePlace(i))
                 {
-                    p._places.Add(i, car);
+                    p._places.Add(i, Ship);
                     p._places[i].SetPosition(5 + i / 5 * p._placeSizeWidth + 5,
                      i % 5 * p._placeSizeHeight + 15, p.PictureWidth,
                     p.PictureHeight);
@@ -57,21 +48,19 @@ namespace Lab1Var5
             }
             return -1;
         }
-
-
+        
         public static T operator -(Parking<T> p, int index)
         {
             if (!p.CheckFreePlace(index))
             {
-                T car = p._places[index];
+                T Ship = p._places[index];
                 p._places.Remove(index);
-                return car;
+                return Ship;
             }
             return null;
         }
-
-
- private bool CheckFreePlace(int index)
+        
+        private bool CheckFreePlace(int index)
         {
             return !_places.ContainsKey(index);
         }
@@ -89,7 +78,7 @@ namespace Lab1Var5
         private void DrawMarking(Graphics g)
         {
             Pen pen = new Pen(Color.Black, 3);
-        
+
             g.DrawRectangle(pen, 0, 0, (_maxCount / 5) * _placeSizeWidth, 480);
             for (int i = 0; i < _maxCount / 5; i++)
             {
@@ -103,6 +92,5 @@ namespace Lab1Var5
                 g.DrawLine(pen, i * _placeSizeWidth, 0, i * _placeSizeWidth, 400);
             }
         }
-
     }
 }

@@ -12,29 +12,23 @@ namespace Lab1Var5
 {
     public partial class FormParking : Form
     {
-        /// <summary>
-        /// Объект от класса многоуровневой парковки
-        /// </summary>
         MultiLevelParking parking;
-        /// <summary>
-        /// Количество уровней-парковок
-        /// </summary>
+
         private const int countLevel = 5;
+
         public FormParking()
         {
             InitializeComponent();
             parking = new MultiLevelParking(countLevel, pictureBoxParking.Width,
            pictureBoxParking.Height);
-            //заполнение listBox
+
             for (int i = 0; i < countLevel; i++)
             {
                 listBoxLevels.Items.Add("Уровень " + (i + 1));
             }
             listBoxLevels.SelectedIndex = 0;
         }
-        /// <summary>
-        /// Метод отрисовки парковки
-        /// </summary>
+
         private void Draw()
         {
             if (listBoxLevels.SelectedIndex > -1)
@@ -46,11 +40,7 @@ namespace Lab1Var5
                 pictureBoxParking.Image = bmp;
             }
         }
-        /// <summary>
-        /// Обработка нажатия кнопки "Припарковать автомобиль"
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+
         private void buttonSetShip_Click(object sender, EventArgs e)
         {
             if (listBoxLevels.SelectedIndex > -1)
@@ -58,8 +48,8 @@ namespace Lab1Var5
                 ColorDialog dialog = new ColorDialog();
                 if (dialog.ShowDialog() == DialogResult.OK)
                 {
-                    var car = new Ship(100, 1000, dialog.Color);
-                    int place = parking[listBoxLevels.SelectedIndex] + car;
+                    var Ship = new Ship(100, 1000, dialog.Color);
+                    int place = parking[listBoxLevels.SelectedIndex] + Ship;
                     if (place == -1)
                     {
                         MessageBox.Show("Нет свободных мест", "Ошибка",
@@ -69,11 +59,7 @@ namespace Lab1Var5
                 }
             }
         }
-        /// <summary>
-        /// Обработка нажатия кнопки "Припарковать гоночный автомобиль"
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+
         private void buttonSetTuningShip_Click(object sender, EventArgs e)
         {
             if (listBoxLevels.SelectedIndex > -1)
@@ -84,9 +70,9 @@ namespace Lab1Var5
                     ColorDialog dialogDop = new ColorDialog();
                     if (dialogDop.ShowDialog() == DialogResult.OK)
                     {
-                        var car = new WaterCar(100, 1000, dialog.Color, dialogDop.Color,
+                        var Ship = new WaterShip(100, 1000, dialog.Color, dialogDop.Color,
                        true, true, true);
-                        int place = parking[listBoxLevels.SelectedIndex] + car;
+                        int place = parking[listBoxLevels.SelectedIndex] + Ship;
                         if (place == -1)
                         {
                             MessageBox.Show("Нет свободных мест", "Ошибка",
@@ -97,11 +83,7 @@ namespace Lab1Var5
                 }
             }
         }
-        /// <summary>
-        /// Обработка нажатия кнопки "Забрать"
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+
         private void buttonTakeShip_Click(object sender, EventArgs e)
         {
             if (listBoxLevels.SelectedIndex > -1)
@@ -130,12 +112,6 @@ namespace Lab1Var5
                 }
             }
         }
-        /// <summary>
-        /// Метод обработки выбора элемента на listBoxLevels
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-
 
         private void listBoxLevels_SelectedIndexChanged_1(object sender, EventArgs e)
         {
