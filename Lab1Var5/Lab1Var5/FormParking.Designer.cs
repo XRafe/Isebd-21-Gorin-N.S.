@@ -3,6 +3,7 @@
     partial class FormParking
     {
         private System.ComponentModel.IContainer components = null;
+        
 
         protected override void Dispose(bool disposing)
         {
@@ -145,6 +146,7 @@
         }
 
         #endregion
+
 
         private System.Windows.Forms.PictureBox pictureBoxParking;
 

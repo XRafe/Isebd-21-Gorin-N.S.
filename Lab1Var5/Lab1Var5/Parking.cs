@@ -79,11 +79,11 @@ namespace Lab1Var5
         private void DrawMarking(Graphics g)
         {
             Pen pen = new Pen(Color.Black, 3);
+            
             g.DrawRectangle(pen, 0, 0, (_maxCount / 5) * _placeSizeWidth, 480);
 
             for (int i = 0; i < _maxCount / 5; i++)
             {
-
                 for (int j = 0; j < 6; ++j)
                 {
                     g.DrawLine(pen, i * _placeSizeWidth, j * _placeSizeHeight,

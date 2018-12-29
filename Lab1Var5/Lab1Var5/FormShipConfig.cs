@@ -137,6 +137,5 @@ DragDropEffects.Move | DragDropEffects.Copy);
             eventAddShip?.Invoke(ship);
             Close();
         }
-
     }
 }

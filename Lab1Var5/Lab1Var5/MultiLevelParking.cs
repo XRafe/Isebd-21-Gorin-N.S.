@@ -28,7 +28,7 @@ namespace Lab1Var5
                pictureHeight));
             }
         }
-        
+
         public Parking<ITransport> this[int ind]
         {
             get
@@ -40,7 +40,7 @@ namespace Lab1Var5
                 return null;
             }
         }
-
+      
         public bool SaveData(string filename)
         {
             if (File.Exists(filename))
@@ -51,7 +51,6 @@ namespace Lab1Var5
             {
                 using (BufferedStream bs = new BufferedStream(fs))
                 {
-        
                     WriteToFile("CountLeveles:" + parkingStages.Count +
                    Environment.NewLine, fs);
                     foreach (var level in parkingStages)
@@ -74,6 +73,7 @@ namespace Lab1Var5
 
 
                                     WriteToFile(ship + Environment.NewLine, fs);
+
                             }
                             finally { }
                         }
@@ -88,7 +88,7 @@ namespace Lab1Var5
             byte[] info = new UTF8Encoding(true).GetBytes(text);
             stream.Write(info, 0, info.Length);
         }
-        
+
         public bool LoadData(string filename)
         {
             if (!File.Exists(filename))

@@ -6,7 +6,6 @@ using System.Windows.Forms;
 
 namespace Lab1Var5
 {
-
     public delegate void shipDelegate(ITransport ship);
 
     static class Program
@@ -17,7 +16,6 @@ namespace Lab1Var5
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FormParking());
-
         }
     }
 }
