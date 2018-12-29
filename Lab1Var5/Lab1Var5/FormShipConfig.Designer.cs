@@ -199,6 +199,7 @@
         }
 
         #endregion
+
         private System.Windows.Forms.GroupBox groupBox1;
 
         private System.Windows.Forms.Label labelShip;

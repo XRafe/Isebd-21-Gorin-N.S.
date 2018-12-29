@@ -35,7 +35,9 @@ namespace Lab1Var5
             _pictureWidth = width;
             _pictureHeight = height;
         }
+
         public abstract void DrawShip(Graphics g);
+
         public abstract void MoveTransport(Direction direction);
     }
 }

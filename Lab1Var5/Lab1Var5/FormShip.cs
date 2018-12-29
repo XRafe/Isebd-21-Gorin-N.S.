@@ -56,7 +56,7 @@ namespace Lab1Var5
             }
             Draw();
         }
-        
+
         private void button1_Click(object sender, EventArgs e)
         {
             Random rnd = new Random();
@@ -66,5 +66,7 @@ namespace Lab1Var5
            pictureBoxShips.Height);
             Draw();
         }
+
     }
 }
+

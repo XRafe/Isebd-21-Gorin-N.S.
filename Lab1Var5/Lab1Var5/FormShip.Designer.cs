@@ -104,7 +104,6 @@
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxShips)).EndInit();
             this.ResumeLayout(false);
-
         }
 
         #endregion
@@ -124,4 +123,3 @@
         private System.Windows.Forms.Button CrTun;
     }
 }
-

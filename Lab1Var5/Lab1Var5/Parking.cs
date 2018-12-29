@@ -51,6 +51,7 @@ namespace Lab1Var5
                 if (p.CheckFreePlace(i))
                 {
                     p._places.Add(i, ship);
+
                     p._places[i].SetPosition(5 + i / 5 * p._placeSizeWidth + 5,
                      i % 5 * p._placeSizeHeight + 15, p.PictureWidth,
                     p.PictureHeight);
@@ -89,11 +90,11 @@ namespace Lab1Var5
         private void DrawMarking(Graphics g)
         {
             Pen pen = new Pen(Color.Black, 3);
+            
             g.DrawRectangle(pen, 0, 0, (_maxCount / 5) * _placeSizeWidth, 480);
 
             for (int i = 0; i < _maxCount / 5; i++)
             {
-
                 for (int j = 0; j < 6; ++j)
                 {
                     g.DrawLine(pen, i * _placeSizeWidth, j * _placeSizeHeight,
