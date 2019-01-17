@@ -194,7 +194,7 @@ namespace Lab1Var5
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Sort_Click(object sender, EventArgs e)
         {
             parking.Sort();
             Draw();
